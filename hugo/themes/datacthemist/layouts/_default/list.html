@@ -1,0 +1,10 @@
+{{ define "main" }}
+  <h1>{{.Title}}</h1>
+  {{.Content}}
+  <!-- Ranges through content/post/*.md -->
+  {{ range .Data.Pages.ByWeight }}
+    <h2>{{.Title}}</h2>
+    <p>{{.Content}}</p>
+    <br/>
+  {{ end }}
+{{ end }}

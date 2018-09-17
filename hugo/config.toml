@@ -1,0 +1,19 @@
+baseURL = "http://example.org/"
+title = "My New Hugo Site"
+
+theme = "Datacthemist"
+
+defaultContentLanguage = "fr"
+defaultContentLanguageInSubdir = true
+
+[languages]
+  [languages.en]
+    languageCode = "en-us"
+    title = "Datactivist en"
+    contentDir = "content/english"
+    languageName = "English"
+  [languages.fr]
+    languageCode = "fr_FR"
+    title = "Datactivist fr"
+    contentDir = "content/français"
+    languageName = "Français"
