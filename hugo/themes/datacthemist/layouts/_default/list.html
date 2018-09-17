@@ -3,8 +3,7 @@
   {{.Content}}
   <!-- Ranges through content/post/*.md -->
   {{ range .Data.Pages.ByWeight }}
-    <h2>{{.Title}}</h2>
-    <p>{{.Content}}</p>
+    {{ .Render "li"}}
     <br/>
   {{ end }}
 {{ end }}

@@ -7,13 +7,29 @@ defaultContentLanguage = "fr"
 defaultContentLanguageInSubdir = true
 
 [languages]
-  [languages.en]
+[languages.en]
     languageCode = "en-us"
     title = "Datactivist en"
     contentDir = "content/english"
     languageName = "English"
-  [languages.fr]
-    languageCode = "fr_FR"
-    title = "Datactivist fr"
-    contentDir = "content/français"
-    languageName = "Français"
+
+[languages.fr]
+  languageCode = "fr_FR"
+  title = "Datactivist fr"
+  contentDir = "content/français"
+  languageName = "Français"
+
+[[languages.fr.menu.main]]
+  url    = "/fr/#"
+  name   = "Blog"
+  weight = 300
+
+[[languages.fr.menu.social]]
+url    = "/fr/#"
+name   = "Github"
+weight = 100
+
+[[languages.fr.menu.social]]
+url    = "/fr/#"
+name   = "linkedin"
+weight = 100
