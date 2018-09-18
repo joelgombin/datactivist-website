@@ -22,7 +22,7 @@ body {
   }
 }
 
-section, header, footer {
+section, .header, .footer {
   width: 100%;
   background: $blue-900 none;
 }
@@ -36,10 +36,9 @@ section, header, footer {
 
 .content {
   padding: $spacer-large;
-  background: $blue-900 none;
 }
 
-.panel {
+.panel, .block_image-list {
   background: white none;
   padding: $spacer-large;
   color: $background-base;
