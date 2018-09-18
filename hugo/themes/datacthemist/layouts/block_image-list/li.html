@@ -1,0 +1,20 @@
+<section id="{{.Title | urlize}}" class="block_image-list">
+  <div class="wrap">
+    <header>
+      <div class="content">
+        <h1>{{.Title}}</h1>    
+      </div>
+    </header>
+    <div class="content">
+      <div class="grid-4">
+        {{ range $key, $value := .Params.images }}
+          {{ range $key, $value := . }}
+            <div class="center txtcenter">
+              <img alt="{{ $key }}" src="{{ $value }}"/>
+            </div>
+          {{ end }}
+        {{ end }}
+      </div>      
+    </div>
+  </div>
+</section>
