@@ -1,0 +1,37 @@
+<section id="{{.Title | urlize}}" class="one-half-column">
+  <div class="wrap">
+    <header>
+      <div class="content center txtcenter pbl">
+        <h1>{{.Title}}</h1>    
+        <div class="autogrid has-gutter-xl">
+          {{ range .Params.pictos }}
+            <div class="center txtcenter">
+              <img src="{{ .image }}" alt="{{ .alt }}">
+              <h2>{{ .name }}</h2>
+            </div>
+          {{ end }}
+        </div>
+      </div>
+    </header>
+
+    <div class="content center w50">
+      <div class="tabs js-tabs">  
+        <nav class="tabs-menu">
+          {{ range $key, $value := .Params.tabs }}
+            <a href="#{{ $key | urlize }}" class="tabs-menu-link is-active">{{ $key }}</a>
+          {{ end }}
+        </nav>
+        <div class="tabs-content panel">
+          {{ range $key, $value := .Params.tabs }}
+            <div id="{{ $key | urlize }}" class="tabs-content-item">
+              <ul>
+              {{ range $value }}
+                <li>{{.}}</li>
+              {{ end }}
+              </ul>
+            </div>
+          {{ end }}
+        </div>
+      </div>
+  </div>
+</section>

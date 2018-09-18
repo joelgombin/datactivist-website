@@ -1,0 +1,16 @@
+<section id="{{.Title | urlize}}" class="one-half-column">
+  <div class="wrap">
+    <div class="content center">
+      <header>
+        <h1>{{.Title}}</h1>
+      </header>
+      <div class="grid-2 has-gutter-xl">
+        <div class="panel">
+          {{.Content}}
+          <a href="{{.Params.linkTo}}" class="button--danger">{{.Params.button}}</a>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>

@@ -5,6 +5,7 @@ theme = "Datacthemist"
 
 defaultContentLanguage = "fr"
 defaultContentLanguageInSubdir = true
+removePathAccents=true
 
 [languages]
 [languages.en]

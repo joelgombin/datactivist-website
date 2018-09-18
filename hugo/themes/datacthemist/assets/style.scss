@@ -1,8 +1,25 @@
 @import "./KNACSS/sass/knacss.scss"; // Bootstrap reboot (basic reset) (CSS file renamed and imported as if it was a partial because of libsass)
 
 body {
-  border: 13px solid $pink-100;
+  border-left: 13px solid $pink-100;
+  border-right: 13px solid $pink-100;
   min-height: 100vh;
+  &::after {
+    content: '';
+    border-bottom: 13px solid $pink-100;
+    position: fixed;
+    bottom: 0;
+    left:0;
+    width: 100%;
+  }
+  &::before {
+    content: '';
+    border-top: 13px solid $pink-100;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left:0;
+  }
 }
 
 section, header, footer {
@@ -14,11 +31,18 @@ section, header, footer {
   transition: max-width .3s, font-size .3s;
   margin: 0 auto;
   clear: both;
+  padding: $spacer-large;
 }
 
 .content {
   padding: $spacer-large;
   background: $blue-900 none;
+}
+
+.panel {
+  background: white none;
+  padding: $spacer-large;
+  color: $background-base;
 }
 
 @media screen and ( min-width: $tiny ) {
