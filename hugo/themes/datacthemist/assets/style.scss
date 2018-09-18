@@ -31,11 +31,6 @@ section, .header, .footer {
   transition: max-width .3s, font-size .3s;
   margin: 0 auto;
   clear: both;
-  padding: $spacer-large;
-}
-
-.content {
-  padding: $spacer-large;
 }
 
 .panel, .block_image-list {
@@ -59,7 +54,13 @@ section, .header, .footer {
 @media screen and ( min-width: $medium ) {
   .wrap {
     max-width: $medium - 1;
-  }  
+    &, .content {
+      padding: $spacer-large;
+    }
+  }
+  .block_three-pictos .tabs {
+    width: 50%;
+  }
 }
 
 @media screen and ( min-width: $large ) {

@@ -7,10 +7,10 @@ weight: 300
 grid: 4
 images:
   - "Région Occitanie": "/image/logo"
+  - "Région Occitanie": "/image/logo"
   - "etalab": "/image/logo"
   - "Ardeche": "/image/logo"
   - "Open Edition": "/image/logo"
-  - "Région Occitanie": "/image/logo"
   - "etalab": "/image/logo"
   - "Ardeche": "/image/logo"
   - "Open Edition": "/image/logo"
