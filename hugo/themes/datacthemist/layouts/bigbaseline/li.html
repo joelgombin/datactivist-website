@@ -1,0 +1,16 @@
+<section id="{{.Title | urlize}}" class="bigbaseline">
+  <div class="wrap">
+    <div class="content center">
+      <header>
+        <h1>{{.Title}}</h1>
+      </header>
+      <aside>
+        <form action="#">
+          <label for="">{{.Params.callToAction}}</label>
+          <input type="text" placeholder="{{.Params.placeholder}}">
+          <input type="submit" value="{{.Params.button}}">
+        </form>  
+      </aside>
+    </div>
+  </div>
+</section>
