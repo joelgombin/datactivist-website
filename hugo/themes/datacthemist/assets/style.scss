@@ -1,0 +1,53 @@
+@import "./KNACSS/sass/knacss.scss"; // Bootstrap reboot (basic reset) (CSS file renamed and imported as if it was a partial because of libsass)
+
+body {
+  border: 13px solid $pink-100;
+  min-height: 100vh;
+}
+
+section, header, footer {
+  width: 100%;
+  background: $blue-900 none;
+}
+
+.wrap {
+  transition: max-width .3s, font-size .3s;
+  margin: 0 auto;
+  clear: both;
+}
+
+.content {
+  padding: $spacer-large;
+  background: $blue-900 none;
+}
+
+@media screen and ( min-width: $tiny ) {
+  .wrap {
+    max-width: $tiny - 1;
+  }
+}
+
+@media screen and ( min-width: $small ) {
+  .wrap {
+    max-width: $small - 1;
+  }  
+}
+
+@media screen and ( min-width: $medium ) {
+  .wrap {
+    max-width: $medium - 1;
+  }  
+}
+
+@media screen and ( min-width: $large ) {
+  .wrap {
+    max-width: $large - 1;
+  }  
+}
+
+@media screen and ( min-width: $extra-large ) {
+  .wrap {
+    max-width: $extra-large - 1;
+  }  
+}
+
