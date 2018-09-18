@@ -1,10 +1,7 @@
 {{ define "main" }}
-<section>
-  <div class="wrap">
-    <div class="content">
-      <h1>{{.Title}}</h1>
-      {{.Content}}
-    </div>
-  </div>
-</section>
+  <!-- Ranges through content/post/*.md -->
+  {{ range where .Pages "Section" "homepage" }}
+    {{ .Render "li"}}
+  {{ end }}
+  
 {{ end }}
