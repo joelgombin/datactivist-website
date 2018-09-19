@@ -1,0 +1,24 @@
+<section id="{{.Title | urlize}}" class="block_actu">
+  <div class="wrap">
+    <div class="content">
+      <div class="grid-2">
+        <div>
+          <header class="fl">
+            <h1>{{.Title}}</h1>
+          </header>
+          {{ $txtButton := .Params.button }}
+          {{ range .Params.actus }}
+          <article class="fl alert--primary">
+            <img src="{{ .image }}" alt="{{ .alt }}">
+            <p>{{ .text }}</p>
+            <p>{{ .date }}</p>
+            <a href="">{{ $txtButton }}</a>
+          </article>
+          {{ end }}
+        </div>
+        <aside>
+          <div class="center txtcenter"> {{ .Content }} </div>
+        </aside>
+      </div>
+    </div>
+</section>
