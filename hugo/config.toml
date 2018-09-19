@@ -26,11 +26,9 @@ removePathAccents=true
   weight = 300
 
 [[languages.fr.menu.social]]
-url    = "/fr/#"
-name   = "Github"
-weight = 100
+  url    = "https://github.com"
+  name   = "github"
 
 [[languages.fr.menu.social]]
-url    = "/fr/#"
-name   = "linkedin"
-weight = 100
+  url    = "https://twitter.com"
+  name   = "twitter"

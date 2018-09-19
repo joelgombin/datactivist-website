@@ -3,12 +3,19 @@
     <div class="content">
 
       <h1><a href="/{{ $.Site.Language | default "en" }}">{{ .Site.Title }}</a></h1>
-      <nav class="sidebar-nav">
+      <nav class="right fr">
+        <div class="main fl">
         {{ range .Site.Menus.main }}
           <a href="{{ .URL }}" title="{{ .Title }}">
             {{- .Name -}}
           </a>
         {{ end }}
+        </div>
+        <div class="social fr">
+        {{ range .Site.Menus.social }}
+          <a href="{{ .URL }}" class="{{ .Name }}"></a>
+        {{ end }}
+        </div>
       </nav>
     </div>
   </div>

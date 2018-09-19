@@ -30,13 +30,47 @@ section, .header, .footer {
 .wrap {
   transition: max-width .3s, font-size .3s;
   margin: 0 auto;
+  padding: $spacer-large 0;
   clear: both;
 }
 
-.panel, .block_image-list {
+.panel, .block_image-list, .block_actu {
   background: white none;
   padding: $spacer-large;
   color: $background-base;
+}
+
+.block_actu {
+  border-top: $background-base 65px solid;
+  header {
+    transform: rotate(-90deg)
+  }
+}
+
+nav {
+  .main a {
+    text-decoration: none;
+    &::before {
+      content: '|';
+      padding: 0 $spacer-small-plus 0 $spacer-small;
+    }
+    &:first-child::before {
+      content: '';
+      padding: 0;
+    }
+  }
+  .social {
+    padding-left: $spacer-extra-large; 
+    a {
+      @include font-size(h2);
+      color: $color-danger;
+      text-decoration: none;
+      &:hover {
+        color: white;
+      }
+    }
+  }
+
 }
 
 @media screen and ( min-width: $tiny ) {
@@ -59,7 +93,7 @@ section, .header, .footer {
     }
   }
   .block_three-pictos .tabs {
-    width: 50%;
+    width: 55%;
   }
 }
 
@@ -75,3 +109,25 @@ section, .header, .footer {
   }  
 }
 
+/* Menu social LOGOS */
+@import "./fontawesome/scss/fontawesome.scss";
+@import "./fontawesome/scss/brands.scss";
+
+.twitter {
+  @extend %fa-icon;
+  @extend .fab;
+
+  &:before {
+    content: fa-content($fa-var-twitter);
+  }
+}
+.github {
+  @extend %fa-icon;
+  @extend .fab;
+
+  &:before {
+    content: fa-content($fa-var-github);
+  }
+}
+
+/* END Menu social LOGOS */
