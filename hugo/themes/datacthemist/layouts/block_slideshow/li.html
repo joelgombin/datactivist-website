@@ -1,0 +1,20 @@
+<section id="{{.Title | urlize}}" class="block_slideshow">
+  <div class="wrap">
+    <header>
+      <div class="content center txtcenter">
+        <h1>{{.Title}}</h1>    
+      </div>
+      <div class="content">
+        <div class="grid-2 has-gutter-l">
+        {{ range .Params.quotes }}
+          <div>
+            <div class="panel">
+              <p>{{ .text }}</p>
+            </div>
+            <p>{{ .author }} - {{ .source }}</p>
+          </div>
+        {{ end }}
+        </div>
+      </div>
+    </header>
+</section>
