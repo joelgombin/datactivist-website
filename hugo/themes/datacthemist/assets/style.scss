@@ -1,9 +1,13 @@
 @import "./KNACSS/sass/knacss.scss"; // Bootstrap reboot (basic reset) (CSS file renamed and imported as if it was a partial because of libsass)
 
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,900,900i|Open+Sans:400,400i,700,700i');
+
 body {
+  
   border-left: 13px solid $pink-100;
   border-right: 13px solid $pink-100;
   min-height: 100vh;
+
   &::after {
     content: '';
     border-bottom: 13px solid $pink-100;
@@ -11,6 +15,7 @@ body {
     bottom: 0;
     left:0;
     width: 100%;
+    z-index: 100;
   }
   &::before {
     content: '';
@@ -19,12 +24,29 @@ body {
     top: 0;
     width: 100%;
     left:0;
+    z-index: 100;
   }
 }
 
-section, .header, .footer {
+.noBg {
+  background: none!important;
+}
+
+section, .footer {
   width: 100%;
   background: $blue-900 none;
+}
+
+.header .content {
+  position: relative;
+  &> div {
+    position: absolute;
+    z-index: 100;
+  }
+}
+
+.header, .block_baseline, .block_three-pictos {
+  font-family: 'Montserrat';
 }
 
 .wrap {
@@ -38,6 +60,150 @@ section, .header, .footer {
   background: white none;
   padding: $spacer-large;
   color: $background-base;
+
+  a {
+    color: $color-brand;
+  }
+  .button--danger {
+    color: white;
+  }
+  li {
+    list-style: none;
+    padding-bottom: $spacer-medium;
+    &::before {
+      content: '\25AA';
+      color: $green-300;
+      padding-right: $spacer-small;
+
+    }
+  }
+}
+
+.block_baseline {
+  background: transparent url('/images/background.jpg') no-repeat 0 0 scroll ;  
+  .wrap {
+    position: relative;
+    &, & .content {
+      padding-bottom: 0; 
+    }
+  }
+  header {
+    padding: $spacer-extra-large 0;
+  }
+  h1 {
+    font-weight: 900;
+    font-size: 6.3rem;
+    text-transform: uppercase;
+  }
+  form {
+    & > * {
+      background: $green-300;
+      padding: $spacer-small-plus 0 $spacer-tiny;
+    }
+  }
+  label, input {
+    border: none!important;
+    box-shadow: none!important;
+    background: none;
+    margin-right: $spacer-medium;
+    font-weight: 600;
+    &, &::placeholder {
+      color: $background-base!important;
+      opacity: 1;
+    }
+  }
+  input {
+    box-shadow: 0 -1px 0 0 $pink-100 inset!important;
+    padding: 0;
+    font-weight: 300;
+    font-size: 1.4rem;
+  }
+  .submit {
+    margin-right: $spacer-medium;
+    margin-top: -$spacer-tiny;
+  }
+}
+
+.block_half-column {
+  h1 {
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: $background-base;
+    font-weight: 900;
+    border-left: 12px solid $color-brand;
+    padding-left: 12px;
+    padding-top: 0;
+  }
+}
+
+.block_three-pictos {
+  h1 {
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    &::before, &::after {
+      content: '---';
+      letter-spacing: -5px;
+      padding: 0 $spacer-medium;
+      transform: scale(2);
+      color: $green-300;
+    }
+  }
+  h2 {
+    color: $color-brand;
+    font-weight: 600;
+    font-size: 2.3rem;
+  }
+  .tabs-menu {
+    text-align: center;
+    padding-bottom: $spacer-large;
+    
+    .tabs-menu-link {
+      padding: 0 $spacer-large;
+      margin: 0 $spacer-large;
+      border: none;
+      color: white;
+      font-size: 2rem;
+      text-transform: uppercase;
+      font-weight: 600;
+      text-decoration: none;
+      position: relative;
+
+      &:first-child::after {
+        content: '';
+        display: block;
+        width: 43px;
+        height: 43px;
+        border-radius: 22px;
+        background: $color-brand;
+        position: absolute;
+        right: -93px;
+        top:-50%;
+        z-index: 50;
+        transition: right .3s;
+      }
+
+      &.is-active:first-child::after {
+        right: -21px;
+      }
+      &:hover {
+        text-decoration: none;
+      }
+      &:last-child::before {
+        content: '';
+        display: block;
+        width: 93px;
+        height: 23px;
+        border-radius: 22px;
+        background: white;
+        position: absolute;
+        left: -9rem;
+        top:0;
+        z-index: 20;
+      }
+    }
+
+  }
 }
 
 .block_actu {
@@ -59,18 +225,16 @@ nav {
       padding: 0;
     }
   }
-  .social {
-    padding-left: $spacer-extra-large; 
-    a {
-      @include font-size(h2);
-      color: $color-danger;
-      text-decoration: none;
-      &:hover {
-        color: white;
-      }
+}
+.social {
+  a {
+    @include font-size(h2);
+    color: $color-danger;
+    text-decoration: none;
+    &:hover {
+      color: white;
     }
   }
-
 }
 
 @media screen and ( min-width: $tiny ) {
@@ -89,11 +253,25 @@ nav {
   .wrap {
     max-width: $medium - 1;
     &, .content {
-      padding: $spacer-large;
+      padding: $spacer-large 0;
+    }
+  }
+  .header {
+    .wrap, .content {
+      padding: 0; 
+    }
+    .content > div {
+      padding-top: $spacer-large; 
     }
   }
   .block_three-pictos .tabs {
     width: 55%;
+  }
+  body > section:first-child::before {
+    content: '';
+    width: 100%;
+    border: 20px solid yellow;
+    padding-top: $spacer-large!important;  
   }
 }
 

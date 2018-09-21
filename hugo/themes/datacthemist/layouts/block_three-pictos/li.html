@@ -3,10 +3,10 @@
     <header>
       <div class="content center txtcenter">
         <h1>{{.Title}}</h1>    
-        <div class="autogrid has-gutter-xl">
+        <div class="autogrid has-gutter-xl pll prl">
           {{ range .Params.pictos }}
-            <div class="center txtcenter">
-              <img src="{{ .image }}" alt="{{ .alt }}">
+            <div class="center txtcenter ptl pbl">
+              <img src="{{ .image }}" alt="{{ .alt }}" class="pbl">
               <h2>{{ .name }}</h2>
             </div>
           {{ end }}
@@ -15,19 +15,25 @@
     </header>
     <div class="content center tabs js-tabs">  
       <nav class="tabs-menu">
-        {{ range $key, $value := .Params.tabs }}
-          <a href="#{{ $key | urlize }}" class="tabs-menu-link is-active">{{ $key }}</a>
+        {{ range $index, $val := .Params.tabs }}
+          {{ range $key, $value := . }}
+            <a href="#{{ $key | urlize }}" class="tabs-menu-link {{ if eq $index 0 }} is-active {{ end }}">
+              {{ $key }}
+            </a>
+          {{ end }}
         {{ end }}
       </nav>
       <div class="tabs-content panel">
-        {{ range $key, $value := .Params.tabs }}
-          <div id="{{ $key | urlize }}" class="tabs-content-item">
-            <ul>
-            {{ range $value }}
-              <li>{{.}}</li>
-            {{ end }}
-            </ul>
-          </div>
+        {{ range .Params.tabs }}
+          {{ range $key, $value := . }}
+            <div id="{{ $key | urlize }}" class="tabs-content-item">
+              <ul>
+              {{ range $value }}
+                <li>{{. | markdownify }}</li>
+              {{ end }}
+              </ul>
+            </div>
+          {{ end }}
         {{ end }}
       </div>
     </div>
