@@ -1,7 +1,7 @@
 ---
-title: "Qui Sommes Nous"
+title: "Qui Sommes Nous ?"
 type: "block_half-column"
-image: "static/"
+image: "photo-equipe.jpg"
 button: "En savoir plus"
 linkTo: "/fr/a-propos/"
 date: 2018-09-17T16:36:31+02:00

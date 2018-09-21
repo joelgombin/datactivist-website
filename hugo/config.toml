@@ -7,16 +7,19 @@ defaultContentLanguage = "fr"
 defaultContentLanguageInSubdir = true
 removePathAccents=true
 
+[params]
+  logo = "/datactivist_logo.svg"
+
 [languages]
 [languages.en]
     languageCode = "en-us"
-    title = "Datactivist en"
+    title = "Datactivist"
     contentDir = "content/english"
     languageName = "English"
 
 [languages.fr]
   languageCode = "fr_FR"
-  title = "Datactivist fr"
+  title = "Datactivist"
   contentDir = "content/français"
   languageName = "Français"
 
