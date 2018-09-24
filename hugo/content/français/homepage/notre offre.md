@@ -21,7 +21,6 @@ pictos:
 
 tabs:
   - "Ouvrir":
-    - "**bold** *italic* [link](#)"
     - "Définir et mettre en oeuvre une stratégie d'open data"
     - "Sensibiliser les acteurs et les décideurs à la culture des données et de leur ouverture"
     - "Cartographier vos données et distinguer les données ouvrables"
@@ -32,12 +31,13 @@ tabs:
     - "Travailler avec les réutilisateurs et mettre en place une stratégie d'open data guidée par la demande"
 
   - "Réutiliser":
-    - sqxqsx
-    - sqxsxs
-    - sqxqsx
-    - sqxsxs
-    - sqxqsx
-    - sqxsxs
+    - "** bold ** * italic * [ link ] - (#)"
+    - "**bold** *italic* [link](#)"
+    - ""
+    - ""
+    - ""
+    - ""
+    - ""
 
 ---
 

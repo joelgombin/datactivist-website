@@ -5,7 +5,14 @@
         <h1>{{.Title}}</h1>    
       </div>
       <div class="content">
-        <div class="grid-2 has-gutter-l">
+        <div class="grid-3 has-gutter-l cycle-slideshow" 
+          data-cycle-speed=600
+          data-cycle-manual-speed=100
+          data-cycle-fx=carousel
+          data-cycle-slides="> div"
+          data-cycle-carousel-visible=2
+          data-cycle-pager="#pager"
+        >
         {{ range .Params.quotes }}
           <div>
             <div class="panel">
@@ -15,6 +22,7 @@
           </div>
         {{ end }}
         </div>
+        <div class="cycle-pager" id="pager"></div>
       </div>
     </header>
 </section>

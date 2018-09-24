@@ -25,16 +25,6 @@ quotes:
     author: "Thomas Lefebre"
     source: "SEOCHARGER"
     weight: 2
-  quote-5:
-    text: "quote 5"
-    author: "Thomas Lefebre"
-    source: "SEOCHARGER"
-    weight: 1
-  quote-6:
-    text: "quote 6"
-    author: "Thomas Lefebre"
-    source: "SEOCHARGER"
-    weight: 2
 ---
 
 
