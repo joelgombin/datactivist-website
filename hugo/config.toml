@@ -22,6 +22,14 @@ removePathAccents=true
   title = "Datactivist"
   contentDir = "content/français"
   languageName = "Français"
+  [languages.fr.params]
+    email = "Mail : hello@datactivist.coop"
+    adress1 = "7 bis, Avenue Saint Jérome — 13100 Aix En Provence"
+    adress2 = "23, rue blondel — 75002 Paris"
+    newsletter = "Entrez votre email (pas de spam, promis !)"
+    image = "stickers.png"
+    button = "OK !"
+
 
 [[languages.fr.menu.main]]
   url    = "/fr/#"
@@ -35,3 +43,4 @@ removePathAccents=true
 [[languages.fr.menu.social]]
   url    = "https://twitter.com"
   name   = "twitter"
+
