@@ -5,7 +5,7 @@ image: "photo-equipe.jpg"
 button: "En savoir plus"
 linkTo: "/fr/a-propos/"
 date: 2018-09-17T16:36:31+02:00
-draft: true
+draft: false
 weight: 100
 ---
 

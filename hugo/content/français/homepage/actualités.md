@@ -23,4 +23,6 @@ actus:
     date: "jul 13"
 ---
 
-sqxqsxs
+Bonne nouvelle : On recrute ! Nous cherchons notre merveilleux-se consultant-e open data junior. Rejoignez-nous !
+
+[https://t.co/EKDiXaJLnX](https://t.co/EKDiXaJLnX)

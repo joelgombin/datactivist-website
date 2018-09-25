@@ -23,12 +23,13 @@ removePathAccents=true
   contentDir = "content/français"
   languageName = "Français"
   [languages.fr.params]
-    email = "Mail : hello@datactivist.coop"
-    adress1 = "7 bis, Avenue Saint Jérome — 13100 Aix En Provence"
-    adress2 = "23, rue blondel — 75002 Paris"
-    newsletter = "Entrez votre email (pas de spam, promis !)"
-    image = "stickers.png"
-    button = "OK !"
+    footerEmail = "Mail : hello@datactivist.coop"
+    footerAdress1 = "7 bis, Avenue Saint Jérome — 13100 Aix En Provence"
+    footerAdress2 = "23, rue blondel — 75002 Paris"
+    footerNewsletter = "Entrez votre email (pas de spam, promis !)"
+    footerImage = "stickers.png"
+    footerAlt = "Stickers"
+    footerButton = "OK !"
 
 
 [[languages.fr.menu.main]]
