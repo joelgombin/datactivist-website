@@ -281,14 +281,20 @@ section, .footer {
   h1 {
     font-size: 5.3rem;
     color: $color-brand;
-    transform: rotate(-90deg);
     font-weight: 900;
     position: absolute;
-    left: 0;
-    bottom: 50%;
+    top: $spacer-extra-large;
+    left: -$spacer-extra-large;
+    bottom: 0;
+    transform-origin: 0 50%;
+    transform: rotate(-90deg) translate(-50%, 50%);
+    background: yellow none;
   }
   header {
-    
+    position: relative;
+  }
+  .articles {
+    float: right;
   }
   article {
     width: 328px;
@@ -313,7 +319,6 @@ section, .footer {
     }
   }
   aside {
-    margin-top: -$spacer-extra-large*2;
     color: $background-base;
     a {
       color: $green-300;
@@ -357,6 +362,12 @@ nav {
   .wrap {
     max-width: $small - 1;
   }
+  .block_actu {
+    aside {
+      margin-top: -$spacer-extra-large*2;  
+    }
+  }
+  
   .block_three-pictos {
     h1 {
       &::before, &::after {
@@ -446,6 +457,7 @@ nav {
       text-transform: uppercase;
     }
   }
+
   .block_three-pictos .tabs {
     width: 55%;
   }
