@@ -68,6 +68,33 @@ section, .footer {
     bottom: 0;
     right: 0;
   }
+  input {
+    border: none!important;
+    box-shadow: none!important;
+    background: none;
+    margin-right: $spacer-medium;
+    font-weight: 300;
+    box-shadow: 0 -1px 0 0 white inset!important;
+    margin-bottom: $spacer-medium;
+    padding: 0 0 $spacer-small;
+
+    @include font-size(h6);
+
+    &, &::placeholder {
+      color: white;
+      opacity: 1;
+    }
+  }
+  .submit {
+    font-weight: 600;
+    @include font-size(h6);
+  }
+  .social {
+    a {
+      color: $green-300!important;
+      @include font-size(h1);
+    }
+  }
 }
 
 
@@ -93,8 +120,6 @@ section, .footer {
     }
   }
 }
-
-
 
 .block_baseline {
   background: transparent url('/images/background.jpg') no-repeat center top scroll ;  
