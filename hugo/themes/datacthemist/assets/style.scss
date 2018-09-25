@@ -97,9 +97,7 @@ section, .footer {
   }
 }
 
-
-
-.panel, .block_image-list, .block_actu {
+.panel, .block_actu {
   background: white none;
   padding: $spacer-large;
   color: $background-base;
@@ -186,13 +184,6 @@ section, .footer {
     font-size: 5rem;
     text-transform: uppercase;
     font-weight: 900;
-    &::before, &::after {
-      content: '---';
-      letter-spacing: -5px;
-      padding: 0 $spacer-medium;
-      transform: scale(2);
-      color: $green-300;
-    }
   }
   h2 {
     color: $color-brand;
@@ -211,8 +202,8 @@ section, .footer {
     border: none;
     
     .tabs-menu-link {
-      padding: 0 $spacer-large;
-      margin: 0 $spacer-large;
+      padding: 0;
+      margin: 0;
       border: none;
       color: white;
       font-size: 2rem;
@@ -220,41 +211,7 @@ section, .footer {
       font-weight: 600;
       text-decoration: none;
       position: relative;
-
-      &:first-child::after {
-        content: '';
-        display: block;
-        width: 43px;
-        height: 43px;
-        border-radius: 22px;
-        background: $color-brand;
-        position: absolute;
-        right: -93px;
-        top:-50%;
-        z-index: 50;
-        transition: right .3s;
-      }
-
-      &.is-active:first-child::after {
-        right: -21px;
-      }
-      &:hover {
-        text-decoration: none;
-      }
-      &:last-child::before {
-        content: '';
-        display: block;
-        width: 93px;
-        height: 23px;
-        border-radius: 22px;
-        background: white;
-        position: absolute;
-        left: -9rem;
-        top:0;
-        z-index: 20;
-      }
     }
-
   }
 }
 
@@ -270,13 +227,56 @@ section, .footer {
     margin-top: $spacer-extra-large;
     width: 10%;
   }
-  .wrap .content {
-    padding: 0;
+}
+
+.block_slideshow {
+  h1 {
+    font-weight: 900;
+    text-transform: uppercase;
+    color: $green-300;
+  }
+  .slides li {
+    margin-right: $spacer-large;
+   
+  }
+  .panel {
+    color: $background-base;
+    font-weight: 600;
+    text-align: left; 
+  }
+  .dots  {
+    position: relative;
+    button:before {
+      background-color: #fff;
+      color: #fff;
+      opacity: 1;
+      border-radius: 8px;  
+      width: 16px;
+      height: 16px;  
+    }
+  }
+  .slick-dots li.slick-active button::before {
+    background-color: $green-300;
+    color: $green-300;
+    opacity: 1;
+    border-radius: 8px;  
+    width: 16px;
+    height: 16px;  
+  }
+  .metas {
+    text-align: left;
+    padding: $spacer-medium 0 0 $spacer-large;
+    text-transform: uppercase;
+    font-weight: 600;
+    span {
+      color: $color-brand;
+      
+    }
   }
 }
 
 .block_actu {
-  border-top: $background-base 65px solid;
+  border-top: $background-base $spacer-extra-large solid;
   position: relative;
   h1 {
     font-size: 5.3rem;
@@ -297,6 +297,7 @@ section, .footer {
     color: white;
     padding: $spacer-medium-plus $spacer-medium;
     margin-left: -268px;
+    margin-top: -$spacer-extra-large*2;
     border-radius: 0;
     box-shadow: 1px -0px 5px 0 rgba(#000, .2);
     z-index: 200;
@@ -309,6 +310,13 @@ section, .footer {
     }
     .date {
       font-weight: 600;
+    }
+  }
+  aside {
+    margin-top: -$spacer-extra-large*2;
+    color: $background-base;
+    a {
+      color: $green-300;
     }
   }
 }
@@ -337,6 +345,8 @@ nav {
   }
 }
 
+
+
 @media screen and ( min-width: $tiny ) {
   .wrap {
     max-width: $tiny - 1;
@@ -346,7 +356,61 @@ nav {
 @media screen and ( min-width: $small ) {
   .wrap {
     max-width: $small - 1;
-  }  
+  }
+  .block_three-pictos {
+    h1 {
+      &::before, &::after {
+        content: '---';
+        letter-spacing: -5px;
+        padding: 0 $spacer-medium;
+        transform: scale(2);
+        color: $green-300;
+      }
+    }
+    .tabs-menu {
+      .tabs-menu-link {
+        &:first-child {
+          padding-right: $spacer-large;
+          margin-right: $spacer-large;
+          &::after {
+            content: '';
+            display: block;
+            width: 43px;
+            height: 43px;
+            border-radius: 22px;
+            background: $color-brand;
+            position: absolute;
+            right: -93px;
+            top:-50%;
+            z-index: 50;
+            transition: right .3s;
+          }
+        }
+        &.is-active:first-child::after {
+          right: -37px;
+        }
+        &:hover {
+          text-decoration: none;
+        }
+        &:last-child {
+          padding-left: $spacer-large;
+          margin-left: $spacer-large;
+          &::before {
+            content: '';
+            display: block;
+            width: 93px;
+            height: 23px;
+            border-radius: 22px;
+            background: white;
+            position: absolute;
+            left: -9rem;
+            top:0;
+            z-index: 20;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media screen and ( min-width: $medium ) {
@@ -356,6 +420,7 @@ nav {
       padding: $spacer-extra-large $spacer-large-plus;
     }
   }
+  
   .header {
     .wrap, .content {
       padding: 0; 
@@ -364,6 +429,10 @@ nav {
       padding-top: $spacer-large; 
     }
   }
+  .breakpoint-small {
+    display: none;
+  }
+
   .block_baseline{
     header {
       padding: $spacer-extra-large*2 0;
@@ -429,57 +498,3 @@ nav {
 }
 
 /* END Menu social LOGOS */
-
-
-/**
-LORY
-
- * (optional) define here the style definitions which should be applied on the slider container
- * e.g. width including further controls like arrows etc.
- */
-.slider {
-  position: relative;
-
-  .frame {
-      /**
-       * (optional) wrapper width, specifies width of the slider frame.
-       */
-      
-
-      position: relative;
-      overflow: hidden;
-      white-space: nowrap;
-  }
-
-  .slides {
-      display: inline-block;
-  }
-
-  li {
-      position: relative;
-      display: inline-block;
-  }
-
-  .prev, .next {
-      position: absolute;
-      top: 50%;
-      margin-top: -25px;
-      display: block;
-      cursor: pointer;
-  }
-
-  .next {
-      right: 0;
-  }
-
-  .prev {
-      left: 0;
-  }
-
-  .next svg, .prev svg {
-      width: 25px;
-  }
-
-}
-
-// END LORY

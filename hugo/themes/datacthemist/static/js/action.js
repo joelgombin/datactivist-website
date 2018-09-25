@@ -1,9 +1,15 @@
 'use strict';
 
 $(function() {
-  $('.js_slider').lory({
-      infinite: 2,
-      slidesToScroll: 2
+  $('.slides').slick({
+    autoplay: false,
+    prevArrow: $('.prev'),
+    nextArrow: $('.next'),
+    dots: true,
+    appendDots: $('.dots'),
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    arrows: false
   });
 
   $('.block_actu article').click(function(){

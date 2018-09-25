@@ -34,8 +34,8 @@ $font-sizes: (
     desktop : 6.3rem
   ),
   h1: (
-    mobile  : 2.8rem,
-    desktop : 3.2rem
+    mobile  : 4.6rem,
+    desktop : 5rem
   ),
   h2: (
     mobile  : 2.4rem,
@@ -200,7 +200,7 @@ $table-footer-background    : transparent;
 $variants-list: (
   (primary,    $color-primary,    $white,    none),
   (success,    $color-success,    $white,    none),
-  (info,       $white,         $blue-900,    none),
+  (info,       $pink-100,         $blue-900,    none),
   (warning,    $color-warning,    $black,    none),
   (danger,     $color-danger,     $white,    none),
   (inverse,    $color-inverse,    $white,    none),
