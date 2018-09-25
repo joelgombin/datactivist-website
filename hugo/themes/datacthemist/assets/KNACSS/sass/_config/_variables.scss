@@ -6,11 +6,11 @@
 
 // Warning: you should use your own values, regardless of the devices
 // Best practice is Mobile First: (min-width: $breakpoint)
-$tiny        : 480px !default; // or 'em' if you prefer, of course
-$small       : 576px !default;
-$medium      : 768px !default;
-$large       : 992px !default;
-$extra-large : 1200px !default;
+$tiny        : 576px !default; // or 'em' if you prefer, of course
+$small       : 768px !default;
+$medium      : 992px !default;
+$large       : 1200px !default;
+$extra-large : 1400px !default;
 
 // ----------
 // Fonts zone
@@ -22,12 +22,16 @@ $font-family-headings  : Montserrat, sans-serif !default; // font for h1, h2.. h
 $font-family-monospace : consolas, courier, monospace !default; // font for code and samples
 
 // Font sizes (1.6rem value is "16px" equivalent)
-$font-size-base : 1.6rem !default;
+$font-size-base : 1.8rem !default;
 
 $font-sizes: (
   base: (
     mobile  : 1.4rem,
     desktop : $font-size-base
+  ),
+  baseline: (
+    mobile  : 4.0rem,
+    desktop : 6.3rem
   ),
   h1: (
     mobile  : 2.8rem,
@@ -43,15 +47,15 @@ $font-sizes: (
   ),
   h4: (
     mobile  : 1.8rem,
-    desktop : 2.0rem
+    desktop : 2.2rem
   ),
   h5: (
-    mobile  : 1.6rem,
-    desktop : 1.8rem
+    mobile  : 1.8rem,
+    desktop : 2.0rem
   ),
   h6: (
-    mobile  : 1.4rem,
-    desktop : 1.6rem
+    mobile  : 1.3rem,
+    desktop : 1.5rem
   )
 ) !default;
 
@@ -196,7 +200,7 @@ $table-footer-background    : transparent;
 $variants-list: (
   (primary,    $color-primary,    $white,    none),
   (success,    $color-success,    $white,    none),
-  (info,       $color-info,       $black,    none),
+  (info,       $white,         $blue-900,    none),
   (warning,    $color-warning,    $black,    none),
   (danger,     $color-danger,     $white,    none),
   (inverse,    $color-inverse,    $white,    none),

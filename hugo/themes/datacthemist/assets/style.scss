@@ -7,24 +7,20 @@ body {
   border-left: 13px solid $pink-100;
   border-right: 13px solid $pink-100;
   min-height: 100vh;
-
-  &::after {
+  &::after, &::before {
     content: '';
-    border-bottom: 13px solid $pink-100;
     position: fixed;
-    bottom: 0;
     left:0;
+    z-index: 10000;
     width: 100%;
-    z-index: 100;
+  }
+  &::after {
+    border-bottom: 13px solid $pink-100;
+    bottom: 0;
   }
   &::before {
-    content: '';
     border-top: 13px solid $pink-100;
-    position: fixed;
     top: 0;
-    width: 100%;
-    left:0;
-    z-index: 100;
   }
 }
 
@@ -32,30 +28,34 @@ body {
   background: none!important;
 }
 
+.wrap {
+  transition: max-width .3s, font-size .3s;
+  margin: 0 auto;
+  clear: both;
+  .content {
+    padding: $spacer-large $spacer-medium;
+  }
+}
+
 section, .footer {
   width: 100%;
   background: $blue-900 none;
 }
 
-.header .content {
-  position: relative;
-  &> div {
-    position: absolute;
-    z-index: 100;
+.header {
+  padding: 0 $spacer-medium;
+  height: 0;
+  .content {
+    position: relative;
+    &> div {
+      position: absolute;
+      z-index: 100;
+    }
   }
 }
 
 .header, .block_baseline, .block_three-pictos {
   font-family: 'Montserrat';
-}
-
-
-
-.wrap {
-  transition: max-width .3s, font-size .3s;
-  margin: 0 auto;
-  padding: $spacer-large 0;
-  clear: both;
 }
 
 .footer {
@@ -70,13 +70,12 @@ section, .footer {
   }
 }
 
+
+
 .panel, .block_image-list, .block_actu {
   background: white none;
   padding: $spacer-large;
   color: $background-base;
-
-
-
   a {
     color: $color-brand;
   }
@@ -95,20 +94,23 @@ section, .footer {
   }
 }
 
+
+
 .block_baseline {
-  background: transparent url('/images/background.jpg') no-repeat 0 0 scroll ;  
+  background: transparent url('/images/background.jpg') no-repeat center top scroll ;  
   .wrap {
     position: relative;
-    &, & .content {
-      padding-bottom: 0; 
+    .content {
+      padding: 0;
+      padding-top: $spacer-extra-large-plus;
     }
   }
   header {
-    padding: $spacer-extra-large*2 0;
+    padding: $spacer-extra-large 0;
   }
   h1 {
     font-weight: 900;
-    font-size: 6.3rem;
+    @include font-size(baseline);
     text-transform: uppercase;
   }
   form {
@@ -126,13 +128,14 @@ section, .footer {
     &, &::placeholder {
       color: $background-base!important;
       opacity: 1;
+      @include font-size(h6);
     }
   }
   input {
     box-shadow: 0 -1px 0 0 $pink-100 inset!important;
     padding: 0;
     font-weight: 300;
-    font-size: 1.4rem;
+    @include font-size(h5);
   }
   .submit {
     margin-right: $spacer-medium;
@@ -147,8 +150,9 @@ section, .footer {
     color: $background-base;
     font-weight: 900;
     border-left: 12px solid $color-brand;
-    padding-left: 12px;
-    padding-top: 0;
+    padding: 0 0 0 12px;
+    margin: 0 0 $spacer-medium-plus $spacer-small-plus;
+    line-height: 1;
   }
 }
 
@@ -238,7 +242,8 @@ section, .footer {
     font-weight: 900;
     border-left: 12px solid $background-base;
     padding-left: 12px;
-    margin-top: $spacer-large
+    margin-top: $spacer-extra-large;
+    width: 10%;
   }
   .wrap .content {
     padding: 0;
@@ -247,6 +252,7 @@ section, .footer {
 
 .block_actu {
   border-top: $background-base 65px solid;
+  position: relative;
   h1 {
     font-size: 5.3rem;
     color: $color-brand;
@@ -254,14 +260,155 @@ section, .footer {
     font-weight: 900;
     position: absolute;
     left: 0;
-
+    bottom: 50%;
   }
   header {
     
   }
+  article {
+    width: 328px;
+    float: right;
+    background: $green-300 none;
+    color: white;
+    padding: $spacer-medium-plus $spacer-medium;
+    margin-left: -268px;
+    border-radius: 0;
+    box-shadow: 1px -0px 5px 0 rgba(#000, .2);
+    z-index: 200;
+    cursor: pointer;
+
+    &.active {
+      display: block;
+      transform: scale(1);
+      z-index: 500; 
+    }
+    .date {
+      font-weight: 600;
+    }
+  }
 }
 
+nav {
+  .main a {
+    text-decoration: none;
+    &::before {
+      content: '|';
+      padding: 0 $spacer-small-plus 0 $spacer-small;
+    }
+    &:first-child::before {
+      content: '';
+      padding: 0;
+    }
+  }
+}
+.social {
+  a {
+    @include font-size(h2);
+    color: $color-danger;
+    text-decoration: none;
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+@media screen and ( min-width: $tiny ) {
+  .wrap {
+    max-width: $tiny - 1;
+  }
+}
+
+@media screen and ( min-width: $small ) {
+  .wrap {
+    max-width: $small - 1;
+  }  
+}
+
+@media screen and ( min-width: $medium ) {
+  .wrap {
+    max-width: $medium - 1;
+    .content {
+      padding: $spacer-extra-large $spacer-large-plus;
+    }
+  }
+  .header {
+    .wrap, .content {
+      padding: 0; 
+    }
+    .content > div {
+      padding-top: $spacer-large; 
+    }
+  }
+  .block_baseline{
+    header {
+      padding: $spacer-extra-large*2 0;
+    }
+    .wrap .content {
+      padding-top: $spacer-large; 
+    }
+    h1 {
+      font-weight: 900;
+      font-size: 6.3rem;
+      text-transform: uppercase;
+    }
+  }
+  .block_three-pictos .tabs {
+    width: 55%;
+  }
+  body > section:first-child::before {
+    content: '';
+    width: 100%;
+    border: 20px solid yellow;
+    padding-top: $spacer-large!important;  
+  }
+  nav a {
+    @include font-size(h4);
+  }
+  .ml30 {
+    margin-left: 30%;
+  }
+}
+
+@media screen and ( min-width: $large ) {
+
+  .wrap {
+    max-width: $large - 1;
+  }  
+}
+
+@media screen and ( min-width: $extra-large ) {
+  .wrap {
+    max-width: $extra-large - 1;
+  }  
+}
+
+/* Menu social LOGOS */
+@import "./fontawesome/scss/fontawesome.scss";
+@import "./fontawesome/scss/brands.scss";
+
+.twitter {
+  @extend %fa-icon;
+  @extend .fab;
+
+  &:before {
+    content: fa-content($fa-var-twitter);
+  }
+}
+.github {
+  @extend %fa-icon;
+  @extend .fab;
+
+  &:before {
+    content: fa-content($fa-var-github);
+  }
+}
+
+/* END Menu social LOGOS */
+
+
 /**
+LORY
+
  * (optional) define here the style definitions which should be applied on the slider container
  * e.g. width including further controls like arrows etc.
  */
@@ -309,99 +456,5 @@ section, .footer {
   }
 
 }
-nav {
-  .main a {
-    text-decoration: none;
-    &::before {
-      content: '|';
-      padding: 0 $spacer-small-plus 0 $spacer-small;
-    }
-    &:first-child::before {
-      content: '';
-      padding: 0;
-    }
-  }
-}
-.social {
-  a {
-    @include font-size(h2);
-    color: $color-danger;
-    text-decoration: none;
-    &:hover {
-      color: white;
-    }
-  }
-}
 
-@media screen and ( min-width: $tiny ) {
-  .wrap {
-    max-width: $tiny - 1;
-  }
-}
-
-@media screen and ( min-width: $small ) {
-  .wrap {
-    max-width: $small - 1;
-  }  
-}
-
-@media screen and ( min-width: $medium ) {
-  .wrap {
-    max-width: $medium - 1;
-    &, .content {
-      padding: $spacer-large 0;
-    }
-  }
-  .header {
-    .wrap, .content {
-      padding: 0; 
-    }
-    .content > div {
-      padding-top: $spacer-large; 
-    }
-  }
-  .block_three-pictos .tabs {
-    width: 55%;
-  }
-  body > section:first-child::before {
-    content: '';
-    width: 100%;
-    border: 20px solid yellow;
-    padding-top: $spacer-large!important;  
-  }
-}
-
-@media screen and ( min-width: $large ) {
-  .wrap {
-    max-width: $large - 1;
-  }  
-}
-
-@media screen and ( min-width: $extra-large ) {
-  .wrap {
-    max-width: $extra-large - 1;
-  }  
-}
-
-/* Menu social LOGOS */
-@import "./fontawesome/scss/fontawesome.scss";
-@import "./fontawesome/scss/brands.scss";
-
-.twitter {
-  @extend %fa-icon;
-  @extend .fab;
-
-  &:before {
-    content: fa-content($fa-var-twitter);
-  }
-}
-.github {
-  @extend %fa-icon;
-  @extend .fab;
-
-  &:before {
-    content: fa-content($fa-var-github);
-  }
-}
-
-/* END Menu social LOGOS */
+// END LORY

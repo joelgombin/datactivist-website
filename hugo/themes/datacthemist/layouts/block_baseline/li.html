@@ -1,16 +1,17 @@
 <section id="{{.Title | urlize}}" class="block_baseline">
   <div class="wrap">
-    <div class="content center">
-      <header class="center txtcenter pbl">
-        <h1>{{.Content}}</h1>
+    <div class="content">
+      <header class="flex-container">
+        <div class="item-center txtcenter">
+          {{.Content}}  
+        </div>
       </header>
       
-      <aside>
-        <form action="#" class="grid-12 no-gutter txtright">
-          <div class="noBg col-4"></div>
-          <div class="col-4"><label for="">{{.Params.callToAction}}</label></div>
-          <div class="col-3"><input class="w100" type="text" placeholder="{{.Params.placeholder}}"></div>
-          <div class="col-1"><a class="submit button--danger">{{.Params.button}}</a></div>
+      <aside class="flex-container">
+        <form action="#" class="ml30 item-fluid grid-12 txtright">
+          <div class="col-6"><label for="">{{.Params.callToAction}}</label></div>
+          <div class="col-5"><input class="w100" type="text" placeholder="{{.Params.placeholder}}"></div>
+          <div class="col-1"><a class="submit button--danger pll">{{.Params.button}}</a></div>
         </form>  
       </aside>
       

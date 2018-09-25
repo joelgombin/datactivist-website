@@ -1,23 +1,27 @@
 <section id="{{.Title | urlize}}" class="block_actu">
   <div class="wrap">
     <div class="content">
-      <div class="grid-2">
+      <div class="grid-2 has-gutter">
         <div>
           <header class="fl">
             <h1>{{.Title}}</h1>
           </header>
+          <div class="articles">
           {{ $txtButton := .Params.button }}
           {{ range .Params.actus }}
-          <article class="fl alert--primary">
-            <img src="{{ .image }}" alt="{{ .alt }}">
-            <p>{{ .text }}</p>
-            <p>{{ .date }}</p>
-            <a href="">{{ $txtButton }}</a>
-          </article>
+            <article>
+              <img src="{{ .image }}" alt="{{ .alt }}">
+              <p class="ptm pbs">{{ .text }}</p>
+              <p class="pbs date">{{ .date }}</p>
+              <div class="center txtcenter">
+                <a class="w50 button--info " href="">{{ $txtButton }}</a>
+              </div>
+            </article>
           {{ end }}
+          </div>
         </div>
-        <aside>
-          <div class="center txtcenter"> {{ .Content }} </div>
+        <aside class="flex-container txtcenter">
+          <div class="item-center"> {{ .Content }} </div>
         </aside>
       </div>
     </div>
