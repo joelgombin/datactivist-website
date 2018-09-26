@@ -1,5 +1,5 @@
-baseURL = "http://example.org/"
-title = "My New Hugo Site"
+baseURL = "http://datactivist.peh4.com/"
+title = "Datactivist"
 
 theme = "Datacthemist"
 
@@ -33,9 +33,24 @@ removePathAccents=true
 
 
 [[languages.fr.menu.main]]
-  url    = "/fr/#"
+  url    = "/fr/"
   name   = "Blog"
   weight = 300
+
+[[languages.fr.menu.main]]
+  url    = "/fr/"
+  name   = "À propos "
+  weight = 100
+
+[[languages.fr.menu.main]]
+  url    = "/fr/"
+  name   = "Ressources "
+  weight = 400
+
+[[languages.fr.menu.main]]
+  url    = "/fr/"
+  name   = "Nos références "
+  weight = 200
 
 [[languages.fr.menu.social]]
   url    = "https://github.com"

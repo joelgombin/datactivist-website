@@ -2,7 +2,7 @@
 title: "Actualités"
 type: "block_actu"
 date: 2018-09-17T16:37:24+02:00
-draft: true
+draft: false
 weight: 600
 button: "Lire"
 actus:

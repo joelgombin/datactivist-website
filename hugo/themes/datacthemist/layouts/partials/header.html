@@ -9,7 +9,7 @@
             </a>
           </h1>
         </div>
-        <nav class="col-8 txtright pts">
+        <nav class="col-8 txtright ptm">
           <div class="main">
           {{ range .Site.Menus.main }}
             <a href="{{ .URL }}" title="{{ .Title }}">
@@ -18,7 +18,7 @@
           {{ end }}
           </div>
         </nav>
-        <div class="social txtright col-2 pts">
+        <div class="social txtright col-2 ptm">
         {{ range .Site.Menus.social }}
           <a href="{{ .URL }}" class="{{ .Name }} pls"></a>
         {{ end }}

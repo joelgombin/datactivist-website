@@ -2,7 +2,7 @@
 title: "Témoignages"
 type: "block_slideshow"
 date: 2018-09-17T16:37:16+02:00
-draft: true
+draft: false
 weight: 400
 quotes:
   - quote-1:
