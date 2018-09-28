@@ -8,15 +8,15 @@ weight: 200
 pictos: 
   picto-1: 
     name: "Conseil et accompagnement "
-    image: "/conseil.svg"
+    image: "/images/conseil.svg"
     alt: "Picto conseil"
   picto-2: 
     name: "Formation"
-    image: "/formation.svg"
+    image: "/images/formation.svg"
     alt: "Picto formation"
   picto-3: 
     name: "Médiation de données"
-    image: "/ampoule.svg"
+    image: "/images/ampoule.svg"
     alt: "Picto ampoule"
 
 tabs:

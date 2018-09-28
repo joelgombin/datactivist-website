@@ -1,4 +1,4 @@
-baseURL = "http://datactivist.peh4.com/"
+baseURL = "http://example.org/"
 title = "Datactivist"
 
 theme = "Datacthemist"
@@ -8,7 +8,8 @@ defaultContentLanguageInSubdir = true
 removePathAccents=true
 
 [params]
-  logo = "/datactivist_logo.svg"
+  logo = "/images/datactivist_logo.svg"
+  logoWhite = "/images/datactivist_logo.svg"
 
 [languages]
 [languages.en]
@@ -27,7 +28,7 @@ removePathAccents=true
     footerAdress1 = "7 bis, Avenue Saint Jérome — 13100 Aix En Provence"
     footerAdress2 = "23, rue blondel — 75002 Paris"
     footerNewsletter = "Entrez votre email (pas de spam, promis !)"
-    footerImage = "stickers.png"
+    footerImage = "images/stickers.png"
     footerAlt = "Stickers"
     footerButton = "OK !"
 
@@ -37,21 +38,6 @@ removePathAccents=true
   name   = "Blog"
   weight = 300
 
-[[languages.fr.menu.main]]
-  url    = "/fr/"
-  name   = "À propos "
-  weight = 100
-
-[[languages.fr.menu.main]]
-  url    = "/fr/"
-  name   = "Ressources "
-  weight = 400
-
-[[languages.fr.menu.main]]
-  url    = "/fr/"
-  name   = "Nos références "
-  weight = 200
-
 [[languages.fr.menu.social]]
   url    = "https://github.com"
   name   = "github"
@@ -59,4 +45,3 @@ removePathAccents=true
 [[languages.fr.menu.social]]
   url    = "https://twitter.com"
   name   = "twitter"
-

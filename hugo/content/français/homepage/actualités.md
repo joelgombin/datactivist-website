@@ -7,17 +7,17 @@ weight: 600
 button: "Lire"
 actus:
   - "Actu 1":
-    image: "/photo-actu.jpg"
+    image: "/images/photo-actu.jpg"
     alt: "qsxsqx"
     text: "Open data et transports : 8 cas d’études français inspirants (3/3)"
     date: "jul 13"
   - "Actu 2":
-    image: "/photo-actu.jpg"
+    image: "/images/photo-actu.jpg"
     alt: "qsxsqx"
     text: "Open data et transports : 8 cas d’études français inspirants (3/3)"
     date: "jul 13"
   - "Actu 3":
-    image: "/photo-actu.jpg"
+    image: "/images/photo-actu.jpg"
     alt: "qsxsqx"
     text: "Open data et transports : 8 cas d’études français inspirants (3/3)"
     date: "jul 13"

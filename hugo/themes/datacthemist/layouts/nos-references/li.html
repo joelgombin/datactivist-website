@@ -1,0 +1,12 @@
+<article class="panel">
+    <ul>
+    {{ range .Params.categories }}
+      <li>{{ . }}</li>
+    {{ end }}
+    </ul>
+  <a href="{{ .Permalink }}">
+
+    <img src="{{ .Params.image }}" alt="{{ .Title }}">
+    <h1 class="h4-like">{{ .Title }}</h1>
+  </a>
+</article> 

@@ -1,0 +1,17 @@
+{{ define "main" }}
+<section>
+  <div class="wrap">
+    <div class="content">
+      {{ $taxo := "categories" }} <!-- Use the plural form here -->
+      <ul id="{{ $taxo }}">
+          {{ range .Param $taxo }}
+              {{ $name := . }}
+              {{ with $.Site.GetPage (printf "/%s/%s" $taxo $name) }}
+                  <li><a href="{{ .Permalink }}">{{ $name }}</a></li>
+              {{ end }}
+          {{ end }}
+      </ul>
+    </div>
+  </div>
+</section>
+{{ end }}
