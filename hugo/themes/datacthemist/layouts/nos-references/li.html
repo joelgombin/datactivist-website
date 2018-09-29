@@ -1,7 +1,9 @@
-<article class="panel">
+<article class="projet {{ range .Params.categories }} {{ . }}{{ end }}">
     <ul>
     {{ range .Params.categories }}
-      <li>{{ . }}</li>
+      {{ with $.Site.GetPage (printf "/categories/%s" .) }}
+          <li><a href="{{ .Permalink }}">{{ .Name }}</a>
+      {{end}}
     {{ end }}
     </ul>
   <a href="{{ .Permalink }}">
