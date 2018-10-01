@@ -49,3 +49,6 @@ removePathAccents=true
 [[languages.fr.menu.lang]]
   url    = "/en"
   name   = "En"
+
+[taxonomies]
+  project = "projects"

@@ -1,0 +1,7 @@
+<article id="{{.Title | urlize}}" class="{{ range .Params.Tags }} {{.}}{{end}}">
+  <div class="wrap">
+    <div class="content">
+        <a href="{{ .Permalink }}">{{.Title}}</a>
+    </div>
+  </div>
+</article>

@@ -1,16 +1,18 @@
 <div class="wrap">
   <div class="content">
     <header>
+      
       {{ with $.Site.GetPage (printf "references") }}
-            <h1>{{ .Title }}</h1>
-            {{ .Section }}
+      <h1>{{ .Title }}</h1>
+      {{ .Section }}
       <nav class="categories">
         <ul>
           <li><a href="{{ .Permalink }}">{{ .Content }}</a></li>
-          {{end}}
-        {{ range $key, $value := .Site.Taxonomies.categories }}
-          {{ with $.Site.GetPage (printf "/categories/%s" $key) }}
-            <li><a href="{{ .Permalink }}">{{ $key }}</a>
+      {{end}}
+
+        {{ range $key, $value := .Site.Taxonomies.projects }}
+          {{ with $.Site.GetPage (printf "/projects/%s" $key) }}
+          <li><a href="{{ .Permalink }}">{{ .Name }}</a>
           {{end}}
         {{ end }}
         </ul>

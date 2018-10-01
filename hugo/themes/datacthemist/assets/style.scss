@@ -179,6 +179,23 @@ section, .footer {
   }
 }
 
+.block_one-column {
+  background: $pink-100 url('/images/background.jpg') no-repeat center top scroll ;  ;
+  header {
+    padding: $spacer-extra-large 0 $spacer-large;
+  }
+  h1 {
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 900;
+    border-left: 12px solid $background-base;
+    padding: 0 0 0 12px;
+    margin: 0 0 $spacer-medium-plus;
+    line-height: 1;
+  }
+}
+
 .block_three-pictos {
   h1 {
     font-size: 5rem;

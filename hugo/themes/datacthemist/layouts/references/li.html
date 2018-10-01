@@ -1,10 +1,10 @@
 <article 
-  class="projet {{ range .Params.categories }} {{ . }}{{ end }}" 
-  style="{{ range first 1 .Params.categories }} {{ with $.Site.GetPage (printf "/categories/%s" .) }} background-color: {{ .Params.color }}; {{ end }}{{ end }}">
+  class="ptl pbl pll prl projet {{ range .Params.projects }} {{ . }}{{ end }}" 
+  style="{{ range first 1 .Params.projects }} {{ with $.Site.GetPage (printf "/projects/%s" .) }} background-color: {{ .Params.color }}; {{ end }}{{ end }}">
     <ul>
-    {{ range .Params.categories }}
-      {{ with $.Site.GetPage (printf "/categories/%s" .) }}
-          <li>{{ .Name }} {{ .Params.title }} {{ .Params.color }}</li>
+    {{ range .Params.projects }}
+      {{ with $.Site.GetPage (printf "/projects/%s" .) }}
+          <li>{{ .Name }}</li>
       {{end}}
     {{ end }}
     </ul>

@@ -1,7 +1,20 @@
 {{ define "main" }}
-  <!-- Ranges through content/post/*.md -->
-  {{ range .Data.Pages.ByWeight }}
-    {{ .Render "li"}}
-  {{ end }}
-  
+<section class="list">
+  <header>
+    <div class="wrap">
+      <div class="content">
+        <h1>{{.Title}}</h1>
+      </div>
+    </div>
+  </header>
+  <div class="wrap">
+    <div class="content">
+      <div class="grid-3-small-2">
+      {{ range .Data.Pages.ByWeight }}
+        {{ .Render "li"}}
+      {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
 {{ end }}
