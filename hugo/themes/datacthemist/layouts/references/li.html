@@ -1,6 +1,6 @@
 <article 
   class="projet {{ range .Params.categories }} {{ . }}{{ end }}" 
-  style="{{ range .Params.categories }} {{ with $.Site.GetPage (printf "/categories/%s" .) }} background-color: {{ .Params.color }}; {{ end }}{{ end }}">
+  style="{{ range first 1 .Params.categories }} {{ with $.Site.GetPage (printf "/categories/%s" .) }} background-color: {{ .Params.color }}; {{ end }}{{ end }}">
     <ul>
     {{ range .Params.categories }}
       {{ with $.Site.GetPage (printf "/categories/%s" .) }}

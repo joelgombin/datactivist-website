@@ -10,7 +10,7 @@
         {{ $button := .Params.button }}
         {{ with $.Site.GetPage .Section }}
           <div class="h1-like"><a href="{{ .Permalink }}">{{ .Title }}</a></div>
-          <a href="{{ .Permalink }}" class="button--danger">{{ $button }}</a>
+          <a href="{{ .Permalink }}" class="button--danger">{{ .Params.button }}</a>
         {{ end }}
       </header>
     </div>
