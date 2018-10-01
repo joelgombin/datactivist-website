@@ -1,0 +1,27 @@
+<section id="{{.Title | urlize}}" class="block_bullet-point-hexagon">
+  <div class="wrap">
+    <div class="content center">
+      <header class="grid-12 has-gutter-l">
+        <h1 class="col-3">{{.Title}}</h1>
+        <h2 class="col-5"><br><span>{{ .Params.subtitle }}</span></h2>
+      </header>
+      <div>{{ .Content }}</div>
+      <div>
+        {{ range .Params.items }}
+          {{ range $key, $value := . }}
+          <div class="grid-6 has-gutter">
+            <div class="hexagon">
+              <img src="{{ .image }}" alt="{{ $key }}">
+            </div>
+            <div class="col-5">
+              <h3>{{ $key }}</h3>
+              <p>{{ .text }}</p>
+            </div>
+          </div>
+          {{ end }}
+        {{ end }}
+      </div>
+      </div>
+    </div>
+  </div>
+</section>

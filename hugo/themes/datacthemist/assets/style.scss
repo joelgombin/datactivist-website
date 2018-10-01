@@ -3,7 +3,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,900,900i|Open+Sans:400,400i,700,700i');
 
 body {
-  
   border-left: 13px solid $pink-100;
   border-right: 13px solid $pink-100;
   min-height: 100vh;
@@ -21,6 +20,19 @@ body {
   &::before {
     border-top: 13px solid $pink-100;
     top: 0;
+  }
+}
+
+section {
+  h1 {
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 900;
+    border-left: 12px solid $background-base;
+    padding: 0 0 0 12px;
+    margin: 0 0 $spacer-medium-plus;
+    line-height: 1;
   }
 }
 
@@ -135,6 +147,7 @@ section, .footer {
     font-weight: 900;
     @include font-size(baseline);
     text-transform: uppercase;
+    border: none;
   }
   form {
     & > * {
@@ -193,6 +206,58 @@ section, .footer {
     padding: 0 0 0 12px;
     margin: 0 0 $spacer-medium-plus;
     line-height: 1;
+  }
+}
+
+.block_bullet-point-hexagon {
+  background: $pink-100 none;
+  color: $background-base;
+  border-color: $background-base;
+  header {
+    margin-bottom: $spacer-large;
+  }
+  h1 {
+    color: $color-brand;
+  }
+  .hexagon {
+    float:left;
+    position: relative;
+    padding-right: $spacer-large;
+    width:223px;
+    &::after {
+      content: "";
+      position: absolute;
+      top:0;
+      left:0;
+      width:223px;
+      height: 256px;
+      background: transparent url('images/hexagon-mask.png') no-repeat 0 0 scroll;
+    }
+  }
+  .grid-6 {
+    z-index: 150;
+    position: relative;
+    &:nth-child(even) {
+      padding-left: 110px; 
+      z-index: 50;
+    }
+  }
+  img {
+    max-width:223px;
+    min-height: 256px;
+    float: left;
+    clear: both;
+  }
+  h2 {
+    span {
+      font-weight: 600;
+      line-height: 1;  
+      @include font-size(h4);
+    }
+  }
+  h3 {
+    font-weight: 600;
+    color: $color-brand;
   }
 }
 
