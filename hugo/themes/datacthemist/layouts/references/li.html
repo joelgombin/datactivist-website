@@ -1,0 +1,15 @@
+<article 
+  class="projet {{ range .Params.categories }} {{ . }}{{ end }}" 
+  style="{{ range .Params.categories }} {{ with $.Site.GetPage (printf "/categories/%s" .) }} background-color: {{ .Params.color }}; {{ end }}{{ end }}">
+    <ul>
+    {{ range .Params.categories }}
+      {{ with $.Site.GetPage (printf "/categories/%s" .) }}
+          <li>{{ .Name }} {{ .Params.title }} {{ .Params.color }}</li>
+      {{end}}
+    {{ end }}
+    </ul>
+  <a href="{{ .Permalink }}">
+    <img src="{{ .Params.image }}" alt="{{ .Title }}">
+    <h1 class="h4-like">{{ .Title }}</h1>
+  </a>
+</article> 

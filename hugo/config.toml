@@ -9,7 +9,7 @@ removePathAccents=true
 
 [params]
   logo = "/images/datactivist_logo.svg"
-  logoWhite = "/images/datactivist_logo.svg"
+  logoWhite = "/images/datactivist_logo-white.svg"
 
 [languages]
 [languages.en]

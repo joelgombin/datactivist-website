@@ -1,0 +1,24 @@
+{{ define "main" }}
+<section class="{{ .Section }} {{ range .Params.categories }} {{ . }}{{ end }}">
+  <div class="wrap">
+    <div class="content">
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="content">
+      <header>
+        {{ $button := .Params.button }}
+        {{ with $.Site.GetPage .Section }}
+          <div class="h1-like"><a href="{{ .Permalink }}">{{ .Title }}</a></div>
+          <a href="{{ .Permalink }}" class="button--danger">{{ $button }}</a>
+        {{ end }}
+      </header>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="content">
+      {{ .Content }}
+    </div>
+  </div>
+</section>
+{{ end }}
