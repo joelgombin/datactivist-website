@@ -1,12 +1,46 @@
 ---
-title: "L'équipe"
-slug: "l-equipe"
+title: "Notre équipe"
 type: "block_team"
 date: 2018-09-17T16:35:39+02:00
 draft: true
 weight: 300
+items:
+  - "Samuel Goëta":
+      image: ""
+      text: "est sociologue. Sa thèse entre dans les coulisses de l'open data et interroge les conditions de mise en œuvre de ces projets. Il est co-fondateur de l'association Open Knowledge France où il milite pour que l'ouverture du savoir bénéficie à tous."
+      email: "samuel@datactivist.coop"
+  - Joël Gombin:
+      image: ""
+      text: "a longtemps fait de la recherche et de l'enseignement en sociologie électorale, ce qui lui a permis d'acquérir de solides compétences en data science. Gérant de Datactivist, il a une expérience significative de direction de projet, pour des clients tant publics que privés."
+      email: "joel@datactivist.coop"
+  - "Sylvain Lapoix":
+      image: ""
+      text: "est datajournaliste. Ex-collaborateur d'OWNI, co-auteur du programme de France Télévision #Datagueule, il chérit l'open data et défend la philosophie des sources ouvertes. Padawan en R et en Python, il forme à l'usage de la donnée journalistes et acteurs de la société civile en France et en Afrique francophone."
+      email: "sylvain@datactivist.coop"
+  - "Timothée Gidoin":
+      text: "est diplômé l'école des Affaires Publiques de Sciences Po et de l'Edhec. Convaincu par l'importance de la donnée dans le débat public, il se passionne pour le fact-checking et s'est récemment investi dans un projet entrepreneurial visant à combattre les fake news."
+      email: "timothee@datactivist.coop"
+  - "Cécile Le Guen":
+      text: "est spécialisée sur les questions de gouvernement ouvert. Ancienne salariée d’Open Knowledge International, elle a parcouru le monde à la rencontre des communautés open data et continuera de le faire chez Datactivist, notamment avec le Programme d’Appui aux Gouvernements Ouverts d’Afrique Francophone."
+      email: "cecile@datactivist.coop"
+  - "Samuel Goëta":
+      image: ""
+      text: "est sociologue. Sa thèse entre dans les coulisses de l'open data et interroge les conditions de mise en œuvre de ces projets. Il est co-fondateur de l'association Open Knowledge France où il milite pour que l'ouverture du savoir bénéficie à tous."
+      email: "samuel@datactivist.coop"
+  - Joël Gombin:
+      image: ""
+      text: "a longtemps fait de la recherche et de l'enseignement en sociologie électorale, ce qui lui a permis d'acquérir de solides compétences en data science. Gérant de Datactivist, il a une expérience significative de direction de projet, pour des clients tant publics que privés."
+      email: "joel@datactivist.coop"
+  - "Sylvain Lapoix":
+      image: ""
+      text: "est datajournaliste. Ex-collaborateur d'OWNI, co-auteur du programme de France Télévision #Datagueule, il chérit l'open data et défend la philosophie des sources ouvertes. Padawan en R et en Python, il forme à l'usage de la donnée journalistes et acteurs de la société civile en France et en Afrique francophone."
+      email: "sylvain@datactivist.coop"
+  - "Timothée Gidoin":
+      text: "est diplômé l'école des Affaires Publiques de Sciences Po et de l'Edhec. Convaincu par l'importance de la donnée dans le débat public, il se passionne pour le fact-checking et s'est récemment investi dans un projet entrepreneurial visant à combattre les fake news."
+      email: "timothee@datactivist.coop"
+  - "Cécile Le Guen":
+      text: "est spécialisée sur les questions de gouvernement ouvert. Ancienne salariée d’Open Knowledge International, elle a parcouru le monde à la rencontre des communautés open data et continuera de le faire chez Datactivist, notamment avec le Programme d’Appui aux Gouvernements Ouverts d’Afrique Francophone."
+      email: "cecile@datactivist.coop"
 ---
 
-Samuel
-Joel
-etc.
+Les membres de l’équipe que nous avons constituée sont tous marqués, dans leur trajectoire, par le fait d’avoir noué une relation personnelle forte à la donnée, en souhaitant la mettre au service du bien commun et du plus grand nombre, que ce soit au travers de leurs choix professionnels ou de leurs engagements personnels, qui sont souvent entremêlés. La donnée sera un outil d’empowerment ou ne sera pas.

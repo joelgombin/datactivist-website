@@ -1,9 +1,8 @@
-<div class="wrap">
+<div class="wrap" class="projects_header">
   <div class="content">
     <header>
-      
       {{ with $.Site.GetPage (printf "references") }}
-      <h1>{{ .Title }}</h1>
+      <h1 class="h_fat">{{ .Title }}</h1>
       {{ .Section }}
       <nav class="categories">
         <ul>
