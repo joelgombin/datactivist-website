@@ -1,4 +1,4 @@
 ---
 title: "Catégorie 3"
-color: "#970908"
+color: "#e8e0dc"
 ---

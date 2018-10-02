@@ -19,7 +19,7 @@
         {{ end }}
 
         {{ range $key, $value := . }}
-          <div class="col-2 txtcenter ptl">
+          <div class="col-2 txtcenter ptl item_list">
             {{ if .image }} <img src="{{ .image }}" alt="{{ $key }}">
             {{ else }} <img src="/images/team_default.png" alt="{{ $key }}">
             {{ end }}

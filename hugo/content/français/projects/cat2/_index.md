@@ -1,4 +1,4 @@
 ---
 title: "Catégorie 2"
-color: "#080997"
+color: "#4ed9cc"
 ---

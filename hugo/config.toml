@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "http://datactivist.peh4.com/"
 title = "Datactivist"
 
 theme = "Datacthemist"
@@ -34,21 +34,21 @@ removePathAccents=true
 
 
 [[languages.fr.menu.main]]
-  url    = "/fr/"
+  url    = "https://medium.com/datactivist"
   name   = "Blog"
   weight = 300
 
 [[languages.fr.menu.social]]
-  url    = "https://github.com"
+  url    = "https://github.com/datactivist"
   name   = "github"
 
 [[languages.fr.menu.social]]
-  url    = "https://twitter.com"
+  url    = "https://twitter.com/datactivi_st"
   name   = "twitter"
 
-[[languages.fr.menu.lang]]
-  url    = "/en"
-  name   = "En"
+# [[languages.fr.menu.lang]]
+#   url    = "/en"
+#   name   = "En"
 
 [taxonomies]
   project = "projects"
