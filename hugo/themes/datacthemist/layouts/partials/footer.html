@@ -10,11 +10,11 @@
             <p class="pbl">{{ .Site.Params.footerAdress2 }}</p>
           </div>
           <div>
-            <form action="#">
+            <!-- <form action="#">
               <input class="w100" type="text" placeholder="{{.Site.Params.footerNewsletter}}">
               <a class="submit button--danger">{{ .Site.Params.footerButton }}</a>
-            </form>  
-            <div class="social ptl">
+            </form>   -->
+            <div class="social">
             {{ range .Site.Menus.social }}
               <a href="{{ .URL }}" class="{{ .Name }} pls"></a>
             {{ end }}
