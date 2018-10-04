@@ -25,6 +25,7 @@
           {{ end }}
         </nav>
         <div class="tabs-content panel">
+          {{ .Content }}
           {{ range .Params.tabs }}
             {{ range $key, $value := . }}
               <div id="{{ $key | urlize }}" class="tabs-content-item">
