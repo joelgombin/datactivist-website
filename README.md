@@ -5,10 +5,10 @@
 
 1 - faites un fork de https://github.com/Peh4/datactivist-website
 2 - dans un terminal
-cd ~
-git clone https://github.com/datactivist/datactivist-website
-cd datactivist-website/hugo/
-hugo server
+>cd ~
+>git clone https://github.com/datactivist/datactivist-website
+>cd datactivist-website/hugo/
+> hugo server
 3 - modifier les fichiers markdown dans les dossiers
 /content/français/homepage
 /content/français/a-propos
@@ -24,9 +24,9 @@ git submodule add -b master git@github.com:datactivist/datactivist.github.io.git
 hugo
 
 7 - On commit le dossier /public dans le submodule datactivist.github.io
-# Go To Public folder
+Go To Public folder
 cd public
-# Add changes to git.
+Add changes to git.
 git add .
 git commit -m "MESSAGE DE COMMIT"
 
