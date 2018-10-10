@@ -20,26 +20,27 @@ pictos:
     alt: "Picto ampoule"
 
 tabs:
-  - "Ouvrir":
-    - "Définir et mettre en oeuvre une stratégie d'open data"
+  - "Ouvrir des données":
+    - "Définir et mettre en œuvre une stratégie d'open data"
     - "Sensibiliser les acteurs et les décideurs à la culture des données et de leur ouverture"
     - "Cartographier vos données et distinguer les données ouvrables"
     - "Configurer l'organisation pour l'ouverture, mettre en place des processus internes"
     - "Adapter les systèmes d'information et les process à l'ouverture des données"
     - "Améliorer la qualité et l'interopérabilité des données ouvertes"
-    - "Identifier et lever les verrous à la réutilisation par la recherche [en sciences sociales et en informatique](/fr/a-propos)"
+    - "Identifier et lever les verrous à la réutilisation par la recherche en sciences sociales et en informatique"
     - "Travailler avec les réutilisateurs et mettre en place une stratégie d'open data guidée par la demande"
-    - "<a href='#reutiliser' class='tabs-menu-link button'>Voir notre offre : Réutilisation des données</a>"
+    - "<a href='#reutiliser' class='tabs-menu-link button'>_**Voir notre offre sur la réutilisation des données**_</a>"
 
-  - "Réutiliser":
-    - "** bold ** * italic * [ link ] - (#)"
-    - "**bold** *italic* [link](#)"
-    - ""
-    - ""
-    - ""
-    - ""
-    - ""
+  - "Réutiliser des données":
+    - Acculturer et former aux données
+    - Identifier des gisements de données ouvertes pertinents
+    - Qualifier les bénéfices de la réutilisation de données
+    - Formaliser la stratégie et mettre en place un plan d'action sur l'open data
+    - Enrichir vos données par le croisement avec des données ouvertes
+    - Obtenir les données utiles à votre activité, trouver des sources alternatives de données
+    - S'appuyer sur la recherche en informatique et en sciences sociales pour augmenter l'utilité des données ouvertes
+    - Expérimenter et fournir un appui méthodologique à la réutilisation de données ouvertes
 
 ---
 
-**Nous pouvons vous aider :**
+**Nous pouvons vous aider à :**

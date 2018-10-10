@@ -7,22 +7,21 @@ weight: 600
 button: "Lire"
 actus:
   - "Actu 1":
-    image: "/images/photo-actu.jpg"
+    image: "/images/cantoche.png"
     alt: "qsxsqx"
-    text: "Open data et transports : 8 cas d’études français inspirants (3/3)"
-    date: "jul 13"
+    text: "Greenpeace : retour sur une campagne pour repérer la viande dans les cantines"
+    date: "22/05/18"
   - "Actu 2":
-    image: "/images/photo-actu.jpg"
+    image: "/images/transportfr.png"
     alt: "qsxsqx"
     text: "Open data et transports : 8 cas d’études français inspirants (3/3)"
-    date: "jul 13"
+    date: "13/07/18"
   - "Actu 3":
-    image: "/images/photo-actu.jpg"
-    alt: "qsxsqx"
-    text: "Open data et transports : 8 cas d’études français inspirants (3/3)"
-    date: "jul 13"
+    image: "/images/spectrum.png"
+    alt: "Ouvrir, ce n’est pas juste partager des données : simple, basique"
+    text: "Ouvrir, ce n’est pas juste partager des données : simple, basique"
+    date: "29/08/18"
 ---
 
-Bonne nouvelle : On recrute ! Nous cherchons notre merveilleux-se consultant-e open data junior. Rejoignez-nous !
-
-[https://t.co/EKDiXaJLnX](https://t.co/EKDiXaJLnX)
+🎂5 octobre 2018 : nous fêtons notre deuxième anniversaire lors de la Data Literacy Conference. Rejoignez nous ! 
+https://datactivist.typeform.com/to/h6usgj
