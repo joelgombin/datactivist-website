@@ -36,6 +36,7 @@ Add changes to git.
 git push origin master
 
 9 - cd ..
+
 10 -
-git add .
-git commit -m "MESSAGE DE COMMIT"
+> git add .
+> git commit -m "MESSAGE DE COMMIT"
