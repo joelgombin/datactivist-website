@@ -13,7 +13,7 @@ images:
   - "ICADE": "/images/logos/logos_05.png"
   - "Compagnie des Alpes": "/images/logos/logos_06.png"
   - "Ardeche": "/images/logos/logos_07.png"
-  - "Stat 4 decision": "/images/logos/logos_08.png"
+  - "Conseil Départemental de Haute Garonne": "/images/logos/logos_08.png"
   - "Greenpeace": "/images/logos/logos_09.png"
   - "CFI": "/images/logos/logos_10.png"
   - "Open contracting": "/images/logos/logos_11.png"
