@@ -9,7 +9,7 @@ quotes:
     text: "Datactivist a permis l’élaboration d’un programme d’activités technique, cohérent et créatif, mais surtout accessible à tous les participants ciblés. De par sa connaissance du réseau open gov/open data, Datactivist a permis l’inscription du projet dans un écosystème complexe et en constante mutation. Enfin, j’ai beaucoup apprécié la forte disponibilité de l'équipe hors mission, pour finaliser le processus projet et assurer le suivi, tant avec les partenaires… qu’avec moi-même!"
     author: "Sandra Fontaine"
     source: "CFI Médias"
-    image: "/images/cecile_hex.png"
+    image: ""
     alt: "image"
     weight: 1
   - quote-2:
