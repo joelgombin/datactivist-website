@@ -13,9 +13,11 @@
               <img src="{{ .image }}" alt="{{ .alt }}">
               <p class="ptm pbs">{{ .text }}</p>
               <p class="pbs date">{{ .date }}</p>
+              {{ if .link }}
               <div class="center txtcenter">
-                <a class="w50 button--info " href="">{{ $txtButton }}</a>
+                <a class="w50 button--info " href="{{ .link }}">{{ $txtButton }}</a>
               </div>
+              {{ end }}
             </article>
           {{ end }}
           </div>
