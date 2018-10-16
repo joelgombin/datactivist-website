@@ -2,23 +2,27 @@
   <div class="wrap">
     <div class="content">
       <div class="grid-12">
-        <div class="col-2">
+        <div class="col-2-small-4">
           <h1>
             <a href="/{{ $.Site.Language | default "en" }}">
               <img src="{{ $.Site.Params.logo }}" alt="{{ .Title }}">
             </a>
           </h1>
+          
         </div>
-        <nav class="col-8 txtright ptm">
-          <div class="main">
-          {{ range .Site.Menus.main }}
-            <a href="{{ .URL }}" title="{{ .Title }}">
-              {{- .Name -}}
-            </a>
-          {{ end }}
-          </div>
-        </nav>
-        <div class="social txtright col-2 ptm">
+        <div class="col-8-small-8 ptm">
+          <button class="nav-button" type="button" role="button" aria-label="open/close navigation"><i></i></button>
+          <nav class="txtright burger-target">
+            <div class="main">
+            {{ range .Site.Menus.main }}
+              <a href="{{ .URL }}" title="{{ .Title }}">
+                {{- .Name -}}
+              </a>
+            {{ end }}
+            </div>
+          </nav>
+        </div>
+        <div class="social txtright col-2-small-all fr ptm">
         {{ range .Site.Menus.social }}
           <a href="{{ .URL }}" class="{{ .Name }} pls"></a>
         {{ end }}
