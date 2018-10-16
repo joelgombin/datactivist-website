@@ -31,6 +31,7 @@ Go To Public folder
 
 Add changes to git.
 >git add .
+
 >git commit -m "MESSAGE DE COMMIT"
 
 8-
