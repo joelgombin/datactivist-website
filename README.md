@@ -9,6 +9,7 @@
 >cd ~
 >git clone https://github.com/datactivist/datactivist-website
 >cd datactivist-website/hugo/
+
 > hugo server
 
 3 - modifier les fichiers markdown dans les dossiers
