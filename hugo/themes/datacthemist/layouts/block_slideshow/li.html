@@ -7,7 +7,14 @@
       <ul class="slides pbl">
       {{ range .Params.quotes }}
           <li>
-            <p class="panel">{{ .text }}</p>
+            <div class="panel">
+              {{ if .image }}
+                <img src="{{ .image }}" alt="{{ .alt }}" class="fl">
+              {{ end }}
+              {{ if .text }}
+                <p>{{ .text }}</p>
+              {{ end }}
+            </div>
             <p class="metas">{{ .author }} - <span>{{ .source }}</span></p>
           </li>
       {{ end }}

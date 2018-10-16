@@ -13,9 +13,11 @@
           {{ end }}
         {{ end }}
       </div>
+      {{ if .Params.button }}
       <div class="center txtcenter ptl">
         <a href="{{ .Params.link }}" class="button--danger">{{.Params.button}}</a>
       </div>
+      {{ end }}
     </div>
   </div>
 </section>

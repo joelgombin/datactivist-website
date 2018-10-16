@@ -5,8 +5,8 @@ date: 2018-09-17T16:37:04+02:00
 draft: false
 weight: 300
 grid: 4
-button: "Voir nos références"
-link: "/fr/nos-references/"
+# button: "Voir nos références"
+# link: "/fr/nos-references/"
 images:
   - "Région Occitanie": "/images/logos/logos_01.png"
   - "etalab": "/images/logos/logos_02.png"
