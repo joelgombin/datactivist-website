@@ -527,6 +527,7 @@ h1 {
       padding: 0 $spacer-large;  
     }
   }
+
   .wrap {
     max-width: $medium - 1;
   }
@@ -542,6 +543,9 @@ h1 {
     &::after {
       border-bottom: 13px solid $pink-100;
     }
+  }
+  nav a {
+    @include font-size(h4);
   }
   .main {
     display: block;
