@@ -8,27 +8,26 @@
               <img src="{{ $.Site.Params.logo }}" alt="{{ .Title }}">
             </a>
           </h1>
-          
         </div>
         <div class="col-8-small-8 ptm">
           <button class="nav-button" type="button" role="button" aria-label="open/close navigation"><i></i></button>
           <nav class="txtright burger-target">
             <div class="main">
-            {{ range .Site.Menus.main }}
+              {{ range .Site.Menus.main }}
               <a href="{{ .URL }}" title="{{ .Title }}">
                 {{- .Name -}}
               </a>
-            {{ end }}
+              {{ end }}
             </div>
           </nav>
         </div>
         <div class="social txtright col-2-small-all fr ptm">
-        {{ range .Site.Menus.social }}
+          {{ range .Site.Menus.social }}
           <a href="{{ .URL }}" class="{{ .Name }} pls"></a>
-        {{ end }}
-        {{ range .Site.Menus.lang }}
+          {{ end }}
+          {{ range .Site.Menus.lang }}
           <a href="{{ .URL }}" class="lang mls">{{ .Name }}</a>
-        {{ end }}
+          {{ end }}
         </div>
       </div>
     </div>

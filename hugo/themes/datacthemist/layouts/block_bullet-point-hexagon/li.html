@@ -5,24 +5,23 @@
         {{ .Content }}
       </header>
       <div class="grid-12-medium-6 has-gutter items-list">
-      {{ range $index, $val := .Params.items }}
+        {{ range $index, $val := .Params.items }}
         {{ if modBool (add $index 1) 2 }}
         <div class="col-1"></div>
         {{ end }}
         {{ range $key, $value := . }}
-          <div class="col-2">
-            <img src="{{ .image }}" alt="{{ $key }}">
-          </div>
-          <div class="col-9">
-            <h3>{{ $key }}</h3>
-            <p>{{ .text }}</p>
-          </div>
+        <div class="col-2">
+          <img src="{{ .image }}" alt="{{ $key }}">
+        </div>
+        <div class="col-9">
+          <h3>{{ $key }}</h3>
+          <p>{{ .text }}</p>
+        </div>
         {{ end }}
         {{ if modBool $index 2 }}
         <div class="col-1"></div>
         {{ end }}
-      {{ end }}
-      </div>
+        {{ end }}
       </div>
     </div>
   </div>

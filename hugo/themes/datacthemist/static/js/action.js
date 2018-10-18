@@ -1,7 +1,7 @@
 'use strict';
 
 $(function() {
-  
+
   $('body').addClass('borders');
 
   $('.slides').slick({
@@ -26,7 +26,7 @@ $(function() {
     // You can unslick at a given breakpoint now by adding:
     // settings: "unslick"
     // instead of a settings object
-  ]
+    ]
   });
 
   $('.block_actu article').click(function(){
@@ -46,7 +46,7 @@ Navigation Button Toggle class
 
 // old browser or not ?
 if ( !('querySelector' in document && 'addEventListener' in window) ) {
-return;
+  return;
 }
 window.document.documentElement.className += ' js-enabled';
 
@@ -59,11 +59,11 @@ var target = document.querySelector('.main');
 // click-touch event
 if ( button ) {
   button.addEventListener('click',
-  function (e) {
+    function (e) {
       button.classList.toggle('is-active');
-    target.classList.toggle('is-opened');
-    e.preventDefault();
-  }, false );
+      target.classList.toggle('is-opened');
+      e.preventDefault();
+    }, false );
 }
 } // end toggleNav()
 

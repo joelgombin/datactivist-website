@@ -1,12 +1,12 @@
 {{ define "main" }}
-  <!-- Ranges through content/post/*.md -->
+<!-- Ranges through content/post/*.md -->
 <section class="references">
   {{- partial "projects_header.html" . -}}
   <div class="wrap">
     <div class="content">
       <div class="grid-4 has-gutter-l">
         {{ range .Pages }}
-            {{ .Render "li"}}
+        {{ .Render "li"}}
         {{ end }}
       </div>
     </div>

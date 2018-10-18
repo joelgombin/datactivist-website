@@ -6,10 +6,10 @@
           <h1>{{.Title}}</h1>    
           <div class="three-pictos grid-3 has-gutter-xl pbl">
             {{ range .Params.pictos }}
-              <div class="center txtcenter ptl pbl">
-                <img src="{{ .image }}" alt="{{ .alt }}" class="pbl">
-                <h2>{{ .name }}</h2>
-              </div>
+            <div class="center txtcenter ptl pbl">
+              <img src="{{ .image }}" alt="{{ .alt }}" class="pbl">
+              <h2>{{ .name }}</h2>
+            </div>
             {{ end }}
           </div>
         </div>
@@ -17,27 +17,27 @@
       <div class="center tabs js-tabs">  
         <nav class="tabs-menu">
           {{ range $index, $val := .Params.tabs }}
-            {{ range $key, $value := . }}
-              <a href="#{{ $key | urlize }}" class="tabs-menu-link {{ if eq $index 0 }} is-active {{ end }}">
-                {{ $key }}
-              </a>
-            {{ end }}
+          {{ range $key, $value := . }}
+          <a href="#{{ $key | urlize }}" class="tabs-menu-link {{ if eq $index 0 }} is-active {{ end }}">
+            {{ $key }}
+          </a>
+          {{ end }}
           {{ end }}
         </nav>
         <div class="tabs-content panel">
           {{ .Content }}
           {{ range .Params.tabs }}
-            {{ range $key, $value := . }}
-              <div id="{{ $key | urlize }}" class="tabs-content-item">
-                <ul>
-                {{ range $value }}
-                  <li>{{. | markdownify }}</li>
-                {{ end }}
-                </ul>
-              </div>
-            {{ end }}
+          {{ range $key, $value := . }}
+          <div id="{{ $key | urlize }}" class="tabs-content-item">
+            <ul>
+              {{ range $value }}
+              <li>{{. | markdownify }}</li>
+              {{ end }}
+            </ul>
+          </div>
           {{ end }}
-         <div class="txtcenter"><a href="{{.Params.linkTo}}" class="button--danger pll prl">{{.Params.button}}</a></div>
+          {{ end }}
+          <div class="txtcenter"><a href="{{.Params.linkTo}}" class="button--danger pll prl">{{.Params.button}}</a></div>
         </div>
       </div>
     </div>

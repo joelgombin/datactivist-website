@@ -6,15 +6,16 @@
       <nav class="categories">
         <ul>
           <li><a href="{{ .Permalink }}">{{ .Content }}</a></li>
-      {{end}}
-
-        {{ range $key, $value := .Site.Taxonomies.projects }}
-          {{ with $.Site.GetPage (printf "/projects/%s" $key) }}
-          <li><a href="{{ .Permalink }}">{{ .Name }}</a>
           {{end}}
-        {{ end }}
+
+          {{ range $key, $value := .Site.Taxonomies.projects }}
+          {{ with $.Site.GetPage (printf "/projects/%s" $key) }}
+          <li><a href="{{ .Permalink }}">{{ .Name }}</a></li>
+          {{end}}
+          {{ end }}
         </ul>
       </nav>
+
     </header>
   </div>
 </div>

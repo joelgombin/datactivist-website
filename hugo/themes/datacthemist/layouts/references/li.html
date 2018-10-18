@@ -1,15 +1,13 @@
-<article 
-  class="ptl pbl pll prl projet {{ range .Params.projects }} {{ . }}{{ end }}" 
-  style="{{ range first 1 .Params.projects }} {{ with $.Site.GetPage (printf "/projects/%s" .) }} background-color: {{ .Params.color }}; {{ end }}{{ end }}">
-    <ul>
+<article class="ptl pbl pll prl projet {{ range .Params.projects }} {{ . }}{{ end }}" style="{{ range first 1 .Params.projects }} {{ with $.Site.GetPage (printf "/projects/%s" .) }} background-color: {{ .Params.color }}; {{ end }}{{ end }}">
+  <ul>
     {{ range .Params.projects }}
-      {{ with $.Site.GetPage (printf "/projects/%s" .) }}
-          <li>{{ .Name }}</li>
-      {{end}}
+    {{ with $.Site.GetPage (printf "/projects/%s" .) }}
+    <li>{{ .Name }}</li>
+    {{end}}
     {{ end }}
-    </ul>
+  </ul>
   <a href="{{ .Permalink }}">
     <img src="{{ .Params.image }}" alt="{{ .Title }}">
     <h1 class="h4-like">{{ .Title }}</h1>
   </a>
-</article> 
+</article>

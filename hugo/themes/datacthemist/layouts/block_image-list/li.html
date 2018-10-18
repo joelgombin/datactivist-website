@@ -6,11 +6,11 @@
       </header>
       <div class="grid-{{ .Params.grid }}-small-2">
         {{ range $key, $value := .Params.images }}
-          {{ range $key, $value := . }}
-            <div class="center txtcenter">
-              <img alt="{{ $key }}" src="{{ $value }}"/>
-            </div>
-          {{ end }}
+        {{ range $key, $value := . }}
+        <div class="center txtcenter">
+          <img alt="{{ $key }}" src="{{ $value }}"/>
+        </div>
+        {{ end }}
         {{ end }}
       </div>
       {{ if .Params.button }}
