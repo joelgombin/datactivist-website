@@ -41,14 +41,30 @@ weight = 300
 [[languages.fr.menu.social]]
 url    = "https://github.com/datactivist"
 name   = "github"
+weight = 100
 
 [[languages.fr.menu.social]]
 url    = "https://twitter.com/datactivi_st"
 name   = "twitter"
+weight = 200
 
-# [[languages.fr.menu.lang]]
-#   url    = "/en"
-#   name   = "En"
+[[languages.fr.menu.lang]]
+url    = "/en"
+name   = "En"
+
+[[languages.en.menu.social]]
+url    = "https://github.com/datactivist"
+name   = "github"
+weight = 100
+
+[[languages.en.menu.social]]
+url    = "https://twitter.com/datactivi_st"
+name   = "twitter"
+weight = 200
+
+[[languages.en.menu.lang]]
+url    = "/fr"
+name   = "Fr"
 
 [taxonomies]
 project = "projects"
