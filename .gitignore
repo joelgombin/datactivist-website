@@ -1,4 +1,4 @@
-hugo/resources/
+hugo/resources/_gen/*
 hugo/public/
 .Rproj.user
 hugo/themes/datacthemist/assets/save_style.scss

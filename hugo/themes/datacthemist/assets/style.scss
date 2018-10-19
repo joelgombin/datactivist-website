@@ -452,6 +452,49 @@ h1 {
 .block_two-columns {}
 /* END ABOUT PAGE */
 
+/* REFERENCES */
+.projects_header {
+  background: $background-base url('/images/background.jpg') no-repeat center top scroll ; 
+  padding: $spacer-extra-large*2 0 $spacer-small;
+  position: relative;
+  .content {
+    padding-bottom: $spacer-small;
+  }
+  h1 {
+    border-color: $background-base;
+    width: 10px;
+  }
+  ul {
+    text-align: left;
+    padding-top: $spacer-large;
+  }
+  li {
+    list-style: none;
+    padding-top: $spacer-small;
+    text-align: center;
+    &:last-child {
+      a::after {
+        border: none;
+      }
+    }
+  }
+  a {
+    text-decoration: none;
+    color: $pink-100;
+    font-weight: 600;
+    &:hover {
+      color: #fff!important;
+    }
+  }
+}
+.references {
+  background: $pink-100;
+  padding-top: 0;
+}
+
+/* END REFERENCES */
+
+
 
 // 576px
 @media screen and ( min-width: $tiny ) {
@@ -591,6 +634,21 @@ h1 {
   .block_bullet-point-hexagon {
     h1 {
       float: left;
+    }
+  }
+  .projects_header {
+    ul {
+      text-align: center;
+      padding-top: $spacer-extra-large;
+    }
+    li {
+      display: inline;
+    }
+    a::after {
+      content: "";
+      border-left: 2px solid $pink-100;
+      padding-left: $spacer-small;
+      margin-left: $spacer-small-plus;
     }
   }
 }
