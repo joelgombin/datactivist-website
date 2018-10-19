@@ -1,4 +1,4 @@
 ---
 title: "Catégorie 4"
-color: "#35515d"
+color: "#6d8893"
 ---

@@ -15,6 +15,10 @@ body {
   }
 }
 
+li {
+  list-style: none; 
+}
+
 .borders {
 
   border-left: 7px solid $pink-100;
@@ -483,13 +487,47 @@ h1 {
     color: $pink-100;
     font-weight: 600;
     &:hover {
-      color: #fff!important;
+      text-decoration: underline;
     }
   }
 }
 .references {
   background: $pink-100;
   padding-top: 0;
+  article {
+    position: relative;
+    .cats {
+      @include font-size(h6);
+      text-align: right;
+      position: absolute;
+      top: $spacer-small;
+      right: $spacer-small;
+      span::after {
+        content: ", "
+      }
+      span:last-child::after {
+        content: ""
+      }
+    }
+    .illustration {
+      text-align: center;
+      height: 250px;
+      opacity: 0.6;
+    }
+    a {
+      text-decoration: none;
+    }
+    h1 {
+      @include font-size(h5);
+      font-weight: 600;
+      text-transform: none;
+      padding: 0 $spacer-medium;
+      color: $pink-100;
+    }
+    &.light, &.light h1 {
+      color: $background-base;
+    }
+  }
 }
 
 /* END REFERENCES */
