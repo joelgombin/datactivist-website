@@ -15,10 +15,6 @@ body {
   }
 }
 
-li {
-  list-style: none; 
-}
-
 .borders {
 
   border-left: 7px solid $pink-100;
@@ -180,7 +176,7 @@ section {
 
 
 /* GENERAL */
-h1 {
+h1, .h1-like{
   font-weight: 900;
   text-transform: uppercase;
   padding-top: $spacer-medium;
@@ -192,7 +188,15 @@ h1 {
   }
 }
 
-.panel, .block_actu {
+li {
+  list-style: none; 
+}
+
+a {
+  text-decoration: none;
+}
+
+.panel, .block_actu, .panel-project {
   background: white none;
   padding: $spacer-medium;
   color: $background-base;
@@ -491,7 +495,7 @@ h1 {
     }
   }
 }
-.references {
+.references, .projects {
   background: $pink-100;
   padding-top: 0;
   article {
@@ -526,6 +530,95 @@ h1 {
     }
     &.light, &.light h1 {
       color: $background-base;
+    }
+  }
+}
+
+.project {
+  padding-top: 0; 
+  padding-bottom: 0; 
+  background: $pink-100 none;
+  color: $background-base;
+
+  aside {
+    width: 100%;
+    font-family: Montserrat;
+    line-height: 1;
+    font-weight: 600;
+    background: $green-300 none;
+    margin: -$spacer-large auto $spacer-large;
+    padding: $spacer-small;
+    color: #fff;
+    text-align: center;
+    img {
+      padding: 0 $spacer-small;
+    }
+    strong {
+      color: $background-base;
+      font-weight: 900;
+      font-size: 2.3rem;
+    }
+
+  }
+  header {
+    font-weight: 600;
+  }
+  .h1-like {
+    width: 10px;
+    border-color: $background-base;
+  }
+  .wrap:first-child {
+    background: $background-base url('/images/background.jpg') no-repeat center top scroll;
+    padding: $spacer-extra-large*2 0 $spacer-large;
+  }
+}
+
+
+.panel-project {
+  padding: $spacer-large;
+  img {
+    padding: 0 $spacer-large;
+  }
+  h2 {
+    font-weight: 600;
+    color: $color-brand;
+    padding: $spacer-medium $spacer-large;
+  }
+  ul {
+    padding: 0 0 $spacer-large;
+    margin: 0;
+  }
+  li::before {
+    content: '';
+    background: transparent url('/images/green-dotted-arrow.svg') no-repeat 0 center scroll;
+    width: $spacer-large;
+    height: 20px;
+    display: block;
+    float: left;
+  }
+  blockquote {
+    background: $green-300 none;
+    position: relative;
+    margin: $spacer-large auto;
+    width: 85%;
+    &::before {
+      content: '';
+    }
+    h2 {
+      color: #fff;
+    }
+    img {
+      position: absolute;
+      background: $background-base none;
+      left: -$spacer-large;
+      top: -$spacer-large;
+      padding: $spacer-medium;
+    }
+    li{
+      color: $background-base;
+      &::before {
+        background: transparent url('/images/white-dotted-arrow.svg') no-repeat 0 center scroll;
+      }
     }
   }
 }
@@ -684,9 +777,15 @@ h1 {
     }
     a::after {
       content: "";
-      border-left: 2px solid $pink-100;
+      border-left: 3px solid $pink-100;
       padding-left: $spacer-small;
       margin-left: $spacer-small-plus;
+    }
+  }
+  .panel-project {
+    padding: $spacer-medium $spacer-extra-large;
+    blockquote {
+      width: 75%;
     }
   }
 }
@@ -711,6 +810,11 @@ h1 {
     article {
       width: 328px;
       margin-left: -255px;
+    }
+  }
+  .project {
+    aside {
+      width: 50%;
     }
   }
 }

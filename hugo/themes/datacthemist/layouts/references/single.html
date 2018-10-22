@@ -1,23 +1,48 @@
 {{ define "main" }}
-<section class="{{ .Section }} {{ range .Params.categories }} {{ . }}{{ end }}">
+<section class="project {{ range .Params.categories }} {{ . }}{{ end }}">
   <div class="wrap">
     <div class="content">
+      {{ $button := .Params.button }}
+      {{ with $.Site.GetPage .Section }}
+      <div class="h1-like title_left-border"><a href="{{ .Permalink }}">{{ .Title }}</a></div>
+      <a href="{{ .Permalink }}" class="button--danger mll">{{ .Params.button }}</a>
+      {{ end }}
     </div>
   </div>
   <div class="wrap">
     <div class="content">
-      <header>
-        {{ $button := .Params.button }}
-        {{ with $.Site.GetPage .Section }}
-        <div class="h1-like"><a href="{{ .Permalink }}">{{ .Title }}</a></div>
-        <a href="{{ .Permalink }}" class="button--danger">{{ .Params.button }}</a>
-        {{ end }}
+      <header class="grid-6 has-gutter-l ptl pbl mll mrl">
+        <div class="col-1">
+          <img src="{{ .Params.image }}" alt="{{ .Title }}" class="fl">
+        </div>
+        <div class="col-5 txtcenter">
+          {{ if .Params.longTitle }}
+          {{ .Params.longTitle }}
+          {{ else }}
+          {{ .Title }}
+          {{ end }}
+        </div>
       </header>
     </div>
-  </div>
-  <div class="wrap">
-    <div class="content">
+    <div class="panel-project">
+      <aside>
+        {{ if .Params.topPicto }}
+        <img src="{{ .Params.topPicto }}" alt="">
+        {{ end }}
+        {{ if .Params.topQuestion }}
+        {{ .Params.topQuestion | markdownify }}
+        {{ end }}
+        {{ if .Params.topAnswer }}
+        <strong>{{ .Params.topAnswer }}</strong>
+        {{ end }}
+      </aside>
       {{ .Content }}
+      {{ $button := .Params.button }}
+      {{ with $.Site.GetPage .Section }}
+      <p class="txtcenter ptl">
+        <a href="{{ .Permalink }}" class="button--danger txtcenter">{{ .Params.button }}</a>
+      </p>  
+      {{ end }}
     </div>
   </div>
 </section>
