@@ -42,6 +42,7 @@ tabs:
     - Obtenir les données utiles à votre activité, trouver des sources alternatives de données
     - S'appuyer sur la recherche en informatique et en sciences sociales pour augmenter l'utilité des données ouvertes
     - Expérimenter et fournir un appui méthodologique à la réutilisation de données ouvertes
+    - "<a href='#ouvrir-des-donnees' class='tabs-menu-link'>_**---> Ouvrir des données**_</a>"
 
 ---
 
