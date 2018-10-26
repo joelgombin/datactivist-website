@@ -2,6 +2,8 @@
 title: "Notre Offre"
 type: "block_three-pictos"
 date: 2018-09-17T16:36:50+02:00
+button: "Contactez nous"
+linkTo: "mailto:hello@datactivist.coop"
 draft: false
 weight: 200
 
@@ -29,7 +31,7 @@ tabs:
     - "Améliorer la qualité et l'interopérabilité des données ouvertes"
     - "Identifier et lever les verrous à la réutilisation par la recherche en sciences sociales et en informatique"
     - "Travailler avec les réutilisateurs et mettre en place une stratégie d'open data guidée par la demande"
-    - "<a href='#reutiliser-des-donnees' class='tabs-menu-link'>_**Voir notre offre sur la réutilisation des données**_</a>"
+    - "<a href='#reutiliser-des-donnees' class='tabs-menu-link'>_**---> Réutiliser des données ouvertes**_</a>"
 
   - "Réutiliser des données":
     - Acculturer et former aux données
@@ -40,6 +42,7 @@ tabs:
     - Obtenir les données utiles à votre activité, trouver des sources alternatives de données
     - S'appuyer sur la recherche en informatique et en sciences sociales pour augmenter l'utilité des données ouvertes
     - Expérimenter et fournir un appui méthodologique à la réutilisation de données ouvertes
+    - "<a href='#ouvrir-des-donnees' class='tabs-menu-link'>_**---> Ouvrir des données**_</a>"
 
 ---
 

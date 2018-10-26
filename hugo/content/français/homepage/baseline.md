@@ -1,5 +1,5 @@
 ---
-title: "We open data, we make them usefull"
+title: "We open data, we make them useful"
 type: "block_baseline"
 date: 2018-09-17T16:37:24+02:00
 draft: false
