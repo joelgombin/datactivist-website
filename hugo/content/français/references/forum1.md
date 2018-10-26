@@ -5,7 +5,7 @@ image: "/images/logos/logos_02-square.png"
 date: 2018-09-17T16:35:39+02:00
 projects: ["cat4"]
 draft: true
-weight: 300
+weight: 0
 topQuestion: "Durée de l'intervention (en cours) ![Fleche vers la droite](/images/white-dotted-arrow.svg)"
 topAnswer: "3 ans"
 topPicto: "/images/clock.svg"
