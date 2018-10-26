@@ -41,9 +41,12 @@ git push origin master
 
 10 -
 > git add .
+
 > git commit -m "MESSAGE DE COMMIT"
 
 11 - faire un commit du md des pages
 > cd ..
+
 > git add .
+
 > git commit -m "MESSAGE DE COMMIT"
