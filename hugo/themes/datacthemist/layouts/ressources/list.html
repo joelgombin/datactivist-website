@@ -1,0 +1,19 @@
+{{ define "main" }}
+<!-- Ranges through content/post/*.md -->
+<section class="ressources">
+  <div class="wrap">
+    <div class="content">
+      <header>
+        <h1 class="title_left-border">{{ .Title }}</h1>
+      </header>
+    </div>
+    <div class="content">
+      <div class="grid-3-small-2 has-gutter-xl">
+        {{ range .Pages }}
+        {{ .Render "li"}}
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>  
+{{ end }}

@@ -142,6 +142,9 @@ section {
       content: '';
       padding: 0;
     }
+    &:hover {
+      color: #fff;
+    }
   }
 }
 .social {
@@ -624,6 +627,40 @@ a {
 }
 
 /* END REFERENCES */
+
+/* RESSOURCES */
+
+.ressources {
+  background: $pink-100 url('/images/background.jpg') no-repeat center top scroll ; 
+  padding: $spacer-extra-large*2 0 $spacer-small;
+  position: relative;
+  h1 {
+    width: 10px;
+    border-color: $background-base;
+  }
+  article {
+    padding: $spacer-medium;
+    background: #fff none;
+    color: $background-base;
+    &.blog {
+      background: $green-300 none;
+      color: #fff;
+      h2 {
+        color: $background-base;
+      }
+      .button--info {
+        color: $color-brand;
+        font-weight: 600;
+      }
+    }
+    h2 {
+      color: $color-brand;
+      font-weight: 600;
+    }
+  }
+}
+
+/* END RESSOURCES */
 
 
 
