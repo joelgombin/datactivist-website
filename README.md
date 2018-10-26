@@ -19,7 +19,7 @@
 4 -Press Ctrl+C to kill the server
 > rm -rf public to completely remove the public directory
 
-5 -
+5 - Faire submodule
 >git submodule add -b master git@github.com:datactivist/datactivist.github.io.git public
 
 6 - taper la commande
@@ -40,5 +40,10 @@ git push origin master
 9 - cd ..
 
 10 -
+> git add .
+> git commit -m "MESSAGE DE COMMIT"
+
+11 - faire un commit du md des pages
+> cd ..
 > git add .
 > git commit -m "MESSAGE DE COMMIT"
