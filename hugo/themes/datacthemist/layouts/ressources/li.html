@@ -1,0 +1,18 @@
+<article id="{{.Title | urlize}}" class="block_ressources {{ range .Params.tags }}{{ . }} {{ end }}">
+  <img src="{{ .Params.image }}" alt="{{ .Title }}">
+  {{ if .Params.tags }}
+  <ul>
+    {{ range .Params.tags }}
+    <li>{{ . }}</li>
+    {{ end }}
+  </ul>
+  {{ end }}
+  <h2>{{ .Title }}</h2>
+  {{ .Content }}
+  {{ if .Params.link }}
+  {{ $link := .Params.link }}
+  {{ with $.Site.GetPage .Section }}
+  <a href="{{ $link }}" class="button--info mll">{{ .Params.button }}</a>
+  {{ end }}
+  {{ end }}
+</article>

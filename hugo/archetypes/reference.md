@@ -1,10 +1,14 @@
 ---
-title: "Animation du forum OpenD’état 2"
-image: "/images/logos/logos_02-square.png"
-date: 2018-09-17T16:35:39+02:00
-projects: ["cat2","cat1"]
+title: "{{ replace .Name "-" " " | title }}"
+longTitle: "{{ replace .Name "-" " " | title }}"
+date: {{ .Date }}
 draft: true
+image: "/images/logos/logos_02-square.png"
+projects: []
 weight: 300
+topQuestion: "Durée de l'intervention (en cours) ![Fleche vers la droite](/images/white-dotted-arrow.svg)"
+topAnswer: "3 ans"
+topPicto: "/images/clock.svg"
 ---
 
 ![Picto Cible](/images/target.svg)

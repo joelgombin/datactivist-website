@@ -25,17 +25,17 @@
       </header>
     </div>
     <div class="panel-project">
+      {{ if .Params.topQuestion }}
       <aside>
         {{ if .Params.topPicto }}
         <img src="{{ .Params.topPicto }}" alt="">
         {{ end }}
-        {{ if .Params.topQuestion }}
         {{ .Params.topQuestion | markdownify }}
-        {{ end }}
         {{ if .Params.topAnswer }}
         <strong>{{ .Params.topAnswer }}</strong>
         {{ end }}
       </aside>
+      {{ end }}
       {{ .Content }}
       {{ $button := .Params.button }}
       {{ with $.Site.GetPage .Section }}
