@@ -1,7 +1,7 @@
 {{ define "main" }}
-  <!-- Ranges through content/post/*.md -->
-  {{ range where .Pages "Section" "homepage" }}
-    {{ .Render "li"}}
-  {{ end }}
-  
+<!-- Ranges through content/post/*.md -->
+{{ range where .Pages "Section" "homepage" }}
+{{ .Render "li"}}
+{{ end }}
+
 {{ end }}

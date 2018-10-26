@@ -8,47 +8,63 @@ defaultContentLanguageInSubdir = true
 removePathAccents=true
 
 [params]
-  logo = "/images/datactivist_logo.svg"
-  logoWhite = "/images/datactivist_logo-white.svg"
+logo = "/images/datactivist_logo.svg"
+logoWhite = "/images/datactivist_logo-white.svg"
 
 [languages]
 [languages.en]
-    languageCode = "en-us"
-    title = "Datactivist"
-    contentDir = "content/english"
-    languageName = "English"
+languageCode = "en-us"
+title = "Datactivist"
+contentDir = "content/english"
+languageName = "English"
 
 [languages.fr]
-  languageCode = "fr_FR"
-  title = "Datactivist"
-  contentDir = "content/français"
-  languageName = "Français"
-  [languages.fr.params]
-    footerEmail = "Mail : hello@datactivist.coop"
-    footerAdress1 = "7 bis, Avenue Saint Jérome — 13100 Aix En Provence"
-    footerAdress2 = "23, rue blondel — 75002 Paris"
-    footerNewsletter = "Entrez votre email (pas de spam, promis !)"
-    footerImage = "images/stickers.png"
-    footerAlt = "Stickers"
-    footerButton = "OK !"
+languageCode = "fr_FR"
+title = "Datactivist"
+contentDir = "content/français"
+languageName = "Français"
+[languages.fr.params]
+footerEmail = "Mail : hello@datactivist.coop"
+footerAdress1 = "7 bis, Avenue Saint Jérome — 13100 Aix En Provence"
+footerAdress2 = "23, rue blondel — 75002 Paris"
+footerNewsletter = "Entrez votre email (pas de spam, promis !)"
+footerImage = "images/stickers.png"
+footerAlt = "Stickers"
+footerButton = "OK !"
 
 
 [[languages.fr.menu.main]]
-  url    = "https://medium.com/datactivist"
-  name   = "Blog"
-  weight = 300
+url    = "https://medium.com/datactivist"
+name   = "Blog"
+weight = 300
 
 [[languages.fr.menu.social]]
-  url    = "https://github.com/datactivist"
-  name   = "github"
+url    = "https://github.com/datactivist"
+name   = "github"
+weight = 100
 
 [[languages.fr.menu.social]]
-  url    = "https://twitter.com/datactivi_st"
-  name   = "twitter"
+url    = "https://twitter.com/datactivi_st"
+name   = "twitter"
+weight = 200
 
-# [[languages.fr.menu.lang]]
-#   url    = "/en"
-#   name   = "En"
+[[languages.fr.menu.lang]]
+url    = "/en"
+name   = "En"
+
+[[languages.en.menu.social]]
+url    = "https://github.com/datactivist"
+name   = "github"
+weight = 100
+
+[[languages.en.menu.social]]
+url    = "https://twitter.com/datactivi_st"
+name   = "twitter"
+weight = 200
+
+[[languages.en.menu.lang]]
+url    = "/fr"
+name   = "Fr"
 
 [taxonomies]
-  project = "projects"
+project = "projects"

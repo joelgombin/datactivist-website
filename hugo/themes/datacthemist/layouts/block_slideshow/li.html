@@ -5,20 +5,21 @@
         <h1 class="pbl">{{.Title}}</h1>    
       </header>
       <ul class="slides pbl">
-      {{ range .Params.quotes }}
-          <li>
-            <div class="panel">
-              {{ if .image }}
-                <img src="{{ .image }}" alt="{{ .alt }}" class="fl">
-              {{ end }}
-              {{ if .text }}
-                <p>{{ .text }}</p>
-              {{ end }}
-            </div>
-            <p class="metas">{{ .author }} - <span>{{ .source }}</span></p>
-          </li>
-      {{ end }}
+        {{ range .Params.quotes }}
+        <li>
+          <div class="panel">
+            {{ if .image }}
+            <img src="{{ .image }}" alt="{{ .alt }}" class="fl">
+            {{ end }}
+            {{ if .text }}
+            <p>{{ .text }}</p>
+            {{ end }}
+          </div>
+          <p class="metas">{{ .author }} - <span>{{ .source }}</span></p>
+        </li>
+        {{ end }}
       </ul>
       <div class="dots"></div>
     </div>
+  </div>
 </section>

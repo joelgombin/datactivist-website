@@ -2,17 +2,17 @@
   <div class="content">
     <header>
       {{ with $.Site.GetPage (printf "references") }}
-      <h1 class="h_fat">{{ .Title }}</h1>
+      <h1 class="title_left-border">{{ .Title }}</h1>
       <nav class="categories">
         <ul>
-          <li><a href="{{ .Permalink }}">{{ .Content }}</a></li>
-      {{end}}
-
-        {{ range $key, $value := .Site.Taxonomies.projects }}
-          {{ with $.Site.GetPage (printf "/projects/%s" $key) }}
-          <li><a href="{{ .Permalink }}">{{ .Name }}</a>
+          <li><a href="{{ .Permalink }}">{{ .Params.txturl }}</a></li>
           {{end}}
-        {{ end }}
+
+          {{ range $key, $value := .Site.Taxonomies.projects }}
+          {{ with $.Site.GetPage (printf "/projects/%s" $key) }}
+          <li><a style="color: {{ .Params.color }}" href="{{ .Permalink }}">{{ .Name }}</a></li>
+          {{ end }}
+          {{ end }}
         </ul>
       </nav>
     </header>

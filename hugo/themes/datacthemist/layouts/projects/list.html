@@ -1,12 +1,12 @@
 {{ define "main" }}
-<section>
+<section class="projects">
   {{- partial "projects_header.html" . -}}
   <div class="wrap">
     <div class="content">
-      <div class="grid-4 has-gutter">
-      {{ range .Pages.ByWeight }}
+      <div class="grid-3-small-2 has-gutter">
+        {{ range .Pages.ByWeight }}
         {{ .Render "li"}}
-      {{ end }}
+        {{ end }}
       </div>
     </div>
   </div>

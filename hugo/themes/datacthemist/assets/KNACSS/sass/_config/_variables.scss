@@ -28,36 +28,40 @@ $font-sizes: (
   base: (
     mobile  : 1.4rem,
     desktop : $font-size-base
-  ),
+    ),
   baseline: (
     mobile  : 4.0rem,
     desktop : 6.3rem
-  ),
+    ),
+  menu: (
+    mobile  : 1.8rem,
+    desktop : 2.2rem
+    ),
   h1: (
     mobile  : 4.6rem,
     desktop : 5rem
-  ),
+    ),
   h2: (
-    mobile  : 2.4rem,
-    desktop : 2.8rem
-  ),
+    mobile  : 2.1rem,
+    desktop : 2.3rem
+    ),
   h3: (
     mobile  : 2.0rem,
     desktop : 2.4rem
-  ),
+    ),
   h4: (
     mobile  : 1.8rem,
     desktop : 2.2rem
-  ),
+    ),
   h5: (
     mobile  : 1.8rem,
     desktop : 2.0rem
-  ),
+    ),
   h6: (
     mobile  : 1.3rem,
     desktop : 1.5rem
-  )
-) !default;
+    )
+  ) !default;
 
 // Line heights
 $line-height-s    : 1.1 !default;
@@ -88,7 +92,7 @@ $grid-gutters: (
   '': 1rem,
   '-l': 2rem,
   '-xl': 4rem
-) !default;
+  ) !default;
 
 // Spacings
 $spacer-tiny             : .5rem  !default;
@@ -205,7 +209,7 @@ $variants-list: (
   (danger,     $color-danger,     $white,    none),
   (inverse,    $color-inverse,    $white,    none),
   (ghost,      $color-ghost,      $white,    0 0 0 1px $white inset)
-) !default;
+  ) !default;
 
 // Component: tabs
 $tabs-border            : $gray-200;

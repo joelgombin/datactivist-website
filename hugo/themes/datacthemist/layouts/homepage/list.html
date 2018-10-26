@@ -1,7 +1,7 @@
 {{ define "main" }}
-  <!-- Ranges through content/post/*.md -->
-  {{ range .Data.Pages.ByWeight }}
-    {{ .Render "li"}}
-  {{ end }}
-  
+<!-- Ranges through content/post/*.md -->
+{{ range .Data.Pages.ByWeight }}
+{{ .Render "li"}}
+{{ end }}
+
 {{ end }}

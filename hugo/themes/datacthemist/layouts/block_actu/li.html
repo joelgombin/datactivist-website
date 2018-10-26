@@ -7,11 +7,11 @@
             <h1>{{.Title}}</h1>
           </header>
           <div class="articles">
-          {{ $txtButton := .Params.button }}
-          {{ range .Params.actus }}
+            {{ $txtButton := .Params.button }}
+            {{ range .Params.actus }}
             <article>
               <img src="{{ .image }}" alt="{{ .alt }}">
-              <p class="ptm pbs">{{ .text }}</p>
+              <p class="ptm pbs text">{{ .text }}</p>
               <p class="pbs date">{{ .date }}</p>
               {{ if .link }}
               <div class="center txtcenter">
@@ -19,7 +19,7 @@
               </div>
               {{ end }}
             </article>
-          {{ end }}
+            {{ end }}
           </div>
         </div>
         <aside class="flex-container txtcenter">
@@ -27,4 +27,5 @@
         </aside>
       </div>
     </div>
+  </div>
 </section>
