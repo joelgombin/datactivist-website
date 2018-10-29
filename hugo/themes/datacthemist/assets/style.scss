@@ -631,20 +631,47 @@ a {
 /* RESSOURCES */
 
 .ressources {
-  background: $pink-100 url('/images/background.jpg') no-repeat center top scroll ; 
+  background: $pink-100 url('/images/background.jpg') no-repeat center -100px scroll ; 
   padding: $spacer-extra-large*2 0 $spacer-small;
   position: relative;
+
   h1 {
     width: 10px;
     border-color: $background-base;
   }
+  .macy {
+    margin: 0 $spacer-medium;
+  }
   article {
+    .tags li {
+      color: $green-300;
+      padding: $spacer-medium 0;
+      &::before {
+        content: "_"
+      }
+    }
+    .button--info {
+      text-align: center;
+    }
+    a {
+      text-decoration: none;
+      color: $background-base;
+    }
+    ul, li {
+      padding: 0;
+      margin: 0;
+    }
+    cursor: pointer;
     padding: $spacer-medium;
     background: #fff none;
-    color: $background-base;
     &.blog {
+      .tags li {
+        color: #fff;
+      }
       background: $green-300 none;
-      color: #fff;
+      a {
+        color: #fff;
+      }
       h2 {
         color: $background-base;
       }
@@ -656,6 +683,14 @@ a {
     h2 {
       color: $color-brand;
       font-weight: 600;
+      text-transform: uppercase;
+    }
+    & > *{
+      opacity: 1;
+      transition: opacity .3s;
+    }
+    &:hover > *{
+      opacity: 0.3;
     }
   }
 }
@@ -852,6 +887,11 @@ a {
   .project {
     aside {
       width: 50%;
+    }
+  }
+  .ressources {
+    .macy {
+      padding: 0 $spacer-extra-large;
     }
   }
 }

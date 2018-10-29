@@ -1,41 +1,36 @@
 'use strict';
+(function() {
+  $(function() {
+    $('body').addClass('borders');
 
-$(function() {
+    $('.slides').slick({
+      autoplay: false,
+      prevArrow: $('.prev'),
+      nextArrow: $('.next'),
+      dots: true,
+      appendDots: $('.dots'),
+      slidesToShow: 2,
+      slidesToScroll: 2,
+      arrows: false,
+      responsive: [{
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      }]
+    });
 
-  $('body').addClass('borders');
-
-  $('.slides').slick({
-    autoplay: false,
-    prevArrow: $('.prev'),
-    nextArrow: $('.next'),
-    dots: true,
-    appendDots: $('.dots'),
-    slidesToShow: 2,
-    slidesToScroll: 2,
-    arrows: false,
-    responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        infinite: true,
-        dots: true
-      }
-    }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
-    ]
-  });
-
-  $('.block_actu article').click(function(){
-    if ($(this).hasClass('active')){
-      $('.block_actu article').removeClass('active')
-    } else {
-      $('.block_actu article').removeClass('active')
-      $(this).addClass('active')
-    }    
+    $('.block_actu article').click(function(){
+      if ($(this).hasClass('active')){
+        $('.block_actu article').removeClass('active')
+      } else {
+        $('.block_actu article').removeClass('active')
+        $(this).addClass('active')
+      }    
+    })
   })
 })
 
@@ -68,4 +63,25 @@ if ( button ) {
 } // end toggleNav()
 
 toggleNav();
+}());
+
+/* RESSOURCES MACY GRID */
+
+(function() {
+  let macy = Macy({
+    container: '#macy-container',
+    trueOrder: false,
+    waitForImages: false,
+    margin: {
+      x: 78,
+      y: 45,
+    },
+    columns: 3,
+    breakAt: {
+      576: 1,
+      768: 2,
+      992: 2,
+      1400: 3
+    }
+  });
 }());
