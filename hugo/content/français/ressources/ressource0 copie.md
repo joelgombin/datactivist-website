@@ -7,4 +7,4 @@ draft: true
 weight: 300
 ---
 
-Test
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.

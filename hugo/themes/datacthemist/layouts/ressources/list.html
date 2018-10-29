@@ -8,10 +8,12 @@
       </header>
     </div>
     <div class="content">
-      <div class="grid-3-small-2 has-gutter-xl">
-        {{ range .Pages }}
-        {{ .Render "li"}}
-        {{ end }}
+      <div class="macy">
+        <div id="macy-container">
+          {{ range .Pages }}
+          {{ .Render "li"}}
+          {{ end }}
+        </div>
       </div>
     </div>
   </div>
