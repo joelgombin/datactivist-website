@@ -1,26 +1,41 @@
 {{ if .Params.link }}
-<article id="{{.Title | urlize}}" class="block_ressources {{ range .Params.tags }}{{ . }} {{ end }}">
-  <a href="{{ .Params.link }}">
-    {{ if .Params.image }}
-    <div class="txtcenter">
-      <img class="txtcenter" src="{{ .Params.image }}" alt="{{ .Title }}">
-    </div>
+
+<article id="{{.Title | urlize}}" class='block_ressources
+{{ range .Params.tags }}
+{{ with $.Site.GetPage  (printf "/tags/%s" . )}}
+{{ if .Params.dark }}
+dark
+{{ end }}
+{{ end }}
+{{ . }}
+{{ end }}' style='{{ range .Params.tags }}
+{{ with $.Site.GetPage  (printf "/tags/%s" . )}}
+{{ if .Params.color }}
+background-color: {{ .Params.color }};
+{{ end }}{{ end }}{{ end }}'>
+<a href="{{ .Params.link }}">
+  {{ if .Params.image }}
+  <div class="txtcenter">
+    <img class="txtcenter" src="{{ .Params.image }}" alt="{{ .Title }}">
+  </div>
+  {{ end }}
+  {{ if .Params.tags }}
+  <ul class="tags">
+    {{ range .Params.tags }}
+    {{ with $.Site.GetPage  (printf "/tags/%s" . )}}
+    <li>{{ .Name }}</li>
     {{ end }}
-    {{ if .Params.tags }}
-    <ul class="tags">
-      {{ range .Params.tags }}
-      <li>{{ . }}</li>
-      {{ end }}
-    </ul>
     {{ end }}
-    <h2>{{ .Title }}</h2>
-    {{ .Content }}
-    {{ $link := .Params.link }}
-    {{ with $.Site.GetPage .Section }}
-    <div class="txtcenter">
-      <a href="{{ $link }}" class="button--info mtm mbm">{{ .Params.button }}</a>
-    </div>
-    {{ end }}  
-  </article>
+  </ul>
+  {{ end }}
+  <h2>{{ .Title }}</h2>
+  {{ .Content }}
+  {{ $link := .Params.link }}
+  {{ with $.Site.GetPage .Section }}
+  <div class="txtcenter">
+    <a href="{{ $link }}" class="button--info mtm mbm">{{ .Params.button }}</a>
+  </div>
+  {{ end }}
 </a>
+</article>
 {{ end }}

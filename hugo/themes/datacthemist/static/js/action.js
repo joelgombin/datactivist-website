@@ -79,7 +79,13 @@ toggleNav();
     columns: 3,
     breakAt: {
       576: 1,
-      768: 2,
+      768: {
+        margin: {
+          x: 40,
+          y: 25,
+        },
+        columns: 2
+      },
       992: 2,
       1400: 3
     }
