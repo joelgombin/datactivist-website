@@ -23,5 +23,4 @@ actus:
     date: "29/08/18"
 ---
 
-🎂5 octobre 2018 : nous fêtons notre deuxième anniversaire lors de la Data Literacy Conference. Rejoignez nous ! 
-https://datactivist.typeform.com/to/h6usgj
+📆 11-13 novembre 2018 : nous animons le hackathon du Paris Peace Forum sur la transparence des données financières. Plus d'infos : https://parispeaceforum.org/fr/hackathon/

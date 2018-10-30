@@ -1,4 +1,4 @@
 ---
-title: "Catégorie 2"
+title: "Secteur privé"
 color: "#4ed9cc"
 ---
