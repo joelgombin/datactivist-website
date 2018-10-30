@@ -1,0 +1,4 @@
+[submodule "hugo/datactivist.github.io"]
+	path = hugo/datactivist.github.io
+	url = git@github.com:datactivist/datactivist.github.io.git
+	branch = master
