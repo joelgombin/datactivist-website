@@ -7,6 +7,9 @@
         <h1 class="title_left-border">{{ .Title }}</h1>
         <nav class="tags ptl">
           <ul>
+            {{ with .Site.GetPage "/ressources" }}
+            <li><a href="{{ .Permalink }}">{{ .Params.txturl }}</a></li>
+            {{ end }}
             {{ range $key, $value := .Site.Taxonomies.tags }}
             {{ with $.Site.GetPage (printf "/tags/%s" $key) }}
             <li><a style="color: {{ .Params.color }}" href="{{ .Permalink }}">{{ .Name }}</a></li>
@@ -19,7 +22,7 @@
     <div class="content">
       <div class="macy">
         <div id="macy-container">
-          {{ range .Pages }}
+          {{ range .Pages.ByWeight }}
           {{ .Render "li"}}
           {{ end }}
         </div>

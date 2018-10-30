@@ -31,7 +31,7 @@
           <div id="{{ $key | urlize }}" class="tabs-content-item">
             <ul>
               {{ range $value }}
-              <li>{{. | markdownify }}</li>
+              <li>{{ . | markdownify }}</li>
               {{ end }}
             </ul>
           </div>

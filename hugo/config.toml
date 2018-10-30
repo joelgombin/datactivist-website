@@ -68,3 +68,4 @@ name   = "Fr"
 
 [taxonomies]
 project = "projects"
+tag = "tags"

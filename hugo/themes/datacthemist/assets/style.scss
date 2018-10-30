@@ -635,8 +635,37 @@ a {
   padding: $spacer-extra-large*2 0 $spacer-small;
   position: relative;
 
+  nav {
+    text-align: center;
+    li {
+      display: inline;
+      list-style: none;
+      padding-top: $spacer-small;
+      text-align: center;
+      &:last-child {
+        a::after {
+          border: none;
+        }
+      }
+    }
+    a {
+      text-decoration: none;
+      color: $pink-100;
+      font-weight: 600;
+      &::after {
+        content: "";
+        border-left: 3px solid #fff1eb;
+        padding-left: 1rem;
+        margin-left: 1.5rem;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
   h1 {
-    width: 10px;
+    width: 300px;
     border-color: $background-base;
   }
   .macy {
@@ -646,6 +675,8 @@ a {
     .tags li {
       color: $green-300;
       padding: $spacer-medium 0;
+
+      text-transform: uppercase;
       &::before {
         content: "_"
       }
@@ -664,7 +695,7 @@ a {
     cursor: pointer;
     padding: $spacer-medium;
     background: #fff none;
-    &.blog {
+    &.dark {
       .tags li {
         color: #fff;
       }
